@@ -27,13 +27,19 @@ right-click a file or folder.
    [GitHub Releases](https://github.com/Superoutman/RightMenu-Releases/releases/latest).
 2. Extract `RightMenu.app` and move it to the **Applications** folder.
 3. Open RightMenu once.
-4. If macOS asks for approval, enable RightMenu under **System Settings >
+4. If macOS blocks the app because it cannot verify the developer, close the
+   warning. Open **System Settings > Privacy & Security**, scroll down to the
+   Security section, click **Open Anyway**, then confirm **Open**.
+5. If macOS asks for approval, enable RightMenu under **System Settings >
    General > Login Items & Extensions > Finder Extensions**.
-5. Relaunch Finder if the context menu does not appear immediately.
+6. Relaunch Finder if the context menu does not appear immediately.
 
-> Current builds are intended for testing until Developer ID signing and Apple
-> notarization are configured. macOS may require you to explicitly allow the
-> app before its first launch.
+> Only use **Open Anyway** when RightMenu was downloaded from this official
+> GitHub Release page. To keep early development and distribution costs low,
+> current builds are not signed and notarized with paid Apple Developer
+> distribution credentials. This is why macOS shows the first-launch security
+> warning; it does not indicate that RightMenu has detected a problem on your
+> Mac.
 
 ## Usage
 
