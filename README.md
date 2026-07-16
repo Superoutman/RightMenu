@@ -10,6 +10,8 @@ A clean, native context-menu extension for macOS Finder.
 
 [Download the latest release](https://github.com/Superoutman/RightMenu-Releases/releases/latest)
 
+![RightMenu Finder context menu](Assets/README/RightMenu.png)
+
 ## Features
 
 - Create new files directly from the background context menu of any Finder
