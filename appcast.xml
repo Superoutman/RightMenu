@@ -3,21 +3,22 @@
     <channel>
         <title>RightMenu</title>
         <item>
-            <title>0.1.8</title>
-            <pubDate>Thu, 16 Jul 2026 14:21:59 +0000</pubDate>
+            <title>0.1.9</title>
+            <pubDate>Thu, 16 Jul 2026 14:54:31 +0000</pubDate>
             <link>https://github.com/Superoutman/RightMenu-Releases</link>
-            <sparkle:version>9</sparkle:version>
-            <sparkle:shortVersionString>0.1.8</sparkle:shortVersionString>
+            <sparkle:version>10</sparkle:version>
+            <sparkle:shortVersionString>0.1.9</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[
 ### Fixed
 
-- Prevented a macOS 15 startup hang caused by repeated menu-bar visibility
-  writes during SwiftUI scene layout.
+- Kept cold-start Refresh and file creation requests in the background so
+  Finder no longer opens RightMenu Settings or leaves a Dock icon behind,
+  while preserving the existing nostalgic Refresh animation.
 
 ]]></description>
-            <enclosure url="https://raw.githubusercontent.com/Superoutman/RightMenu-Releases/main/RightMenu-0.1.8.zip" length="3399501" type="application/octet-stream" sparkle:edSignature="KHwSDWNLYqvES88b6Gw6E+11BKrzKR9JIp4BfU5qsJGRefaf8H0QBoH62wq6ppc9nwIV5h2wFGzPoD4lyseFAA=="/>
+            <enclosure url="https://raw.githubusercontent.com/Superoutman/RightMenu-Releases/main/RightMenu-0.1.9.zip" length="3397932" type="application/octet-stream" sparkle:edSignature="HPTu2bjWmD4ozG9P1PCfLZ2FZM4BXhd4bSrwFGZlQ/8neTnCY5Nl0l4mciKiDTHOuFF/ITD21TrHPQklzaWrBQ=="/>
         </item>
     </channel>
 </rss>
