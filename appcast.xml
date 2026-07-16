@@ -3,22 +3,31 @@
     <channel>
         <title>RightMenu</title>
         <item>
-            <title>0.1.3</title>
-            <pubDate>Thu, 16 Jul 2026 08:07:37 +0000</pubDate>
+            <title>0.1.4</title>
+            <pubDate>Thu, 16 Jul 2026 08:48:01 +0000</pubDate>
             <link>https://github.com/Superoutman/RightMenu-Releases</link>
-            <sparkle:version>4</sparkle:version>
-            <sparkle:shortVersionString>0.1.3</sparkle:shortVersionString>
+            <sparkle:version>5</sparkle:version>
+            <sparkle:shortVersionString>0.1.4</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[
+### Added
+
+- Added an optional standalone Refresh command to Finder background context menus.
+- Clicking Refresh produces a brief nostalgic screen flash without changing files.
+- Added a Settings toggle for showing or hiding the Refresh command.
+
 ### Fixed
 
-- Fixed intermittent missing Finder context menus after replacing or updating the app.
-- Finder extension registration is now refreshed automatically after an app version change.
-- Local installation now stops stale Finder extension sessions before replacing the app bundle.
+- Fixed a crash caused by the initial animated flash-window cleanup.
+- Removed separator items that Finder rendered as oversized blank gaps around Refresh.
+
+### Notes
+
+- Finder controls the placement of extension-provided commands, so RightMenu cannot guarantee that Refresh appears directly below the system New Folder command.
 
 ]]></description>
-            <enclosure url="https://raw.githubusercontent.com/Superoutman/RightMenu-Releases/main/RightMenu-0.1.3.zip" length="3939360" type="application/octet-stream" sparkle:edSignature="vm0PQ4ME7mv8XS5ww04ppcOs8gEcv9Yu0uaADQri83s1OyfYAQXIjAo0cKMcAyBCLgxAM1PdVypKmzQxH5MZCw=="/>
+            <enclosure url="https://raw.githubusercontent.com/Superoutman/RightMenu-Releases/main/RightMenu-0.1.4.zip" length="3949032" type="application/octet-stream" sparkle:edSignature="VPlnmMl1ePEunIJNC4o7QaRqaWOkOolUIwh5Fnn9JpkNdu+cwbSGac+Bh/P7I6GvNjylGQnfiwCtrU/ov4akDA=="/>
         </item>
     </channel>
 </rss>
