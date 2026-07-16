@@ -3,25 +3,28 @@
     <channel>
         <title>RightMenu</title>
         <item>
-            <title>0.1.5</title>
-            <pubDate>Thu, 16 Jul 2026 10:17:49 +0000</pubDate>
+            <title>0.1.7</title>
+            <pubDate>Thu, 16 Jul 2026 14:13:51 +0000</pubDate>
             <link>https://github.com/Superoutman/RightMenu-Releases</link>
-            <sparkle:version>6</sparkle:version>
-            <sparkle:shortVersionString>0.1.5</sparkle:shortVersionString>
+            <sparkle:version>8</sparkle:version>
+            <sparkle:shortVersionString>0.1.7</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[
 ### Changed
 
-- Replaced the prominent settings update button with a compact green
-  version-available badge in the window toolbar.
-- The badge is localized, remains accessible, and opens the existing Sparkle
-  update flow when clicked.
-- Removed the explanatory status line from the menu bar menu so the Settings
-  command uses standard macOS menu spacing.
+- Added a required preflight check before release archives are created. It
+  verifies file-creation behavior, builds the complete app bundle, and checks
+  the working tree for whitespace errors.
+
+### Fixed
+
+- Regenerated the macOS application icon with transparent corners and safer
+  visual padding, preventing the white square background and oversized icon
+  appearance in Finder, Dock, and Launchpad on macOS 15.
 
 ]]></description>
-            <enclosure url="https://raw.githubusercontent.com/Superoutman/RightMenu-Releases/main/RightMenu-0.1.5.zip" length="3955499" type="application/octet-stream" sparkle:edSignature="3t+1xZJHmpbCZ7o8w/Oxo9fc3bmh3aFOf/Lzctkzhbra6tmIS4wdzblEduEW3ZIkGEx7xYuacA3cd/Ks9bvQBg=="/>
+            <enclosure url="https://raw.githubusercontent.com/Superoutman/RightMenu-Releases/main/RightMenu-0.1.7.zip" length="3399359" type="application/octet-stream" sparkle:edSignature="CBy+5gWr3IuZbTvUgQOI7B+94YKCW1RZvel9hdpV1ii8bqzyPHYeI56f6Onj7IQ8Kny4UNMhVxekTP5wa1uhCw=="/>
         </item>
     </channel>
 </rss>
