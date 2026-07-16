@@ -1,0 +1,66 @@
+name: Publish GitHub Release
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "RightMenu-*.zip"
+      - "RightMenu-*.md"
+      - "appcast.xml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rightmenu-github-release
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out release files
+        uses: actions/checkout@v5
+
+      - name: Resolve version and files
+        shell: bash
+        run: |
+          set -euo pipefail
+          archive="$(find . -maxdepth 1 -type f -name 'RightMenu-*.zip' -print -quit)"
+          test -n "$archive"
+          filename="${archive#./}"
+          version="${filename#RightMenu-}"
+          version="${version%.zip}"
+          notes="RightMenu-$version.md"
+          test -f "$notes"
+          test -f appcast.xml
+          echo "VERSION=$version" >> "$GITHUB_ENV"
+          echo "TAG=v$version" >> "$GITHUB_ENV"
+          echo "ARCHIVE=$filename" >> "$GITHUB_ENV"
+          echo "NOTES=$notes" >> "$GITHUB_ENV"
+
+      - name: Create or update GitHub Release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release edit "$TAG" \
+              --title "RightMenu $VERSION" \
+              --notes-file "$NOTES"
+            gh release upload "$TAG" \
+              "$ARCHIVE" \
+              appcast.xml \
+              --clobber
+          else
+            gh release create "$TAG" \
+              "$ARCHIVE" \
+              appcast.xml \
+              --target main \
+              --title "RightMenu $VERSION" \
+              --notes-file "$NOTES"
+          fi

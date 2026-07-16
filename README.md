@@ -12,5 +12,10 @@ repository.
 - `appcast.xml`: Sparkle update feed.
 - `RightMenu-<version>.zip`: latest RightMenu update archive.
 
+Download the latest build from this repository's
+[GitHub Releases](https://github.com/Superoutman/RightMenu-Releases/releases/latest).
+Each update pushed by the private source repository automatically creates or
+updates the matching GitHub Release.
+
 > Current builds are intended for testing until Developer ID signing and Apple
 > notarization are configured in the private source repository.
