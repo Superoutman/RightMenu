@@ -3,28 +3,21 @@
     <channel>
         <title>RightMenu</title>
         <item>
-            <title>0.1.7</title>
-            <pubDate>Thu, 16 Jul 2026 14:13:51 +0000</pubDate>
+            <title>0.1.8</title>
+            <pubDate>Thu, 16 Jul 2026 14:21:59 +0000</pubDate>
             <link>https://github.com/Superoutman/RightMenu-Releases</link>
-            <sparkle:version>8</sparkle:version>
-            <sparkle:shortVersionString>0.1.7</sparkle:shortVersionString>
+            <sparkle:version>9</sparkle:version>
+            <sparkle:shortVersionString>0.1.8</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[
-### Changed
-
-- Added a required preflight check before release archives are created. It
-  verifies file-creation behavior, builds the complete app bundle, and checks
-  the working tree for whitespace errors.
-
 ### Fixed
 
-- Regenerated the macOS application icon with transparent corners and safer
-  visual padding, preventing the white square background and oversized icon
-  appearance in Finder, Dock, and Launchpad on macOS 15.
+- Prevented a macOS 15 startup hang caused by repeated menu-bar visibility
+  writes during SwiftUI scene layout.
 
 ]]></description>
-            <enclosure url="https://raw.githubusercontent.com/Superoutman/RightMenu-Releases/main/RightMenu-0.1.7.zip" length="3399359" type="application/octet-stream" sparkle:edSignature="CBy+5gWr3IuZbTvUgQOI7B+94YKCW1RZvel9hdpV1ii8bqzyPHYeI56f6Onj7IQ8Kny4UNMhVxekTP5wa1uhCw=="/>
+            <enclosure url="https://raw.githubusercontent.com/Superoutman/RightMenu-Releases/main/RightMenu-0.1.8.zip" length="3399501" type="application/octet-stream" sparkle:edSignature="KHwSDWNLYqvES88b6Gw6E+11BKrzKR9JIp4BfU5qsJGRefaf8H0QBoH62wq6ppc9nwIV5h2wFGzPoD4lyseFAA=="/>
         </item>
     </channel>
 </rss>
