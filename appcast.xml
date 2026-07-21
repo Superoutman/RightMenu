@@ -3,28 +3,23 @@
     <channel>
         <title>RightMenu</title>
         <item>
-            <title>0.1.13</title>
-            <pubDate>Tue, 21 Jul 2026 07:09:51 +0000</pubDate>
+            <title>0.1.14</title>
+            <pubDate>Tue, 21 Jul 2026 08:12:44 +0000</pubDate>
             <link>https://github.com/Superoutman/RightMenu</link>
-            <sparkle:version>14</sparkle:version>
-            <sparkle:shortVersionString>0.1.13</sparkle:shortVersionString>
+            <sparkle:version>15</sparkle:version>
+            <sparkle:shortVersionString>0.1.14</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[
-### Added
+### Fixed
 
-- Added Pages, Numbers, and Keynote to the end of the configurable **New File**
-  format list and Finder submenu.
-- New Pages, Numbers, and Keynote files are created from bundled blank
-  templates, so the feature works offline without requiring app automation
-  permissions.
-
-### Changed
-
-- The Settings footer now opens the official RightMenu website.
+- Restored the native macOS 26 grouped Settings appearance used during local
+  development without changing the Settings layout or controls.
+- Release candidates linked against the macOS 26 SDK are now launched and
+  lifecycle-tested on macOS 15 before publishing.
 
 ]]></description>
-            <enclosure url="https://raw.githubusercontent.com/Superoutman/RightMenu/main/RightMenu-0.1.13.zip" length="3730762" type="application/octet-stream" sparkle:edSignature="DoitLxOyJlCsZhJrsEtkwWhYAMDS3kN1rPrx0tt2jc+tyqGzP9ZzWj4XE52/bCF1F/3bkPXy60zXzuGEBUxQBw=="/>
+            <enclosure url="https://raw.githubusercontent.com/Superoutman/RightMenu/main/RightMenu-0.1.14.zip" length="3729883" type="application/octet-stream" sparkle:edSignature="qcMfGdM7gB47NmL8Uk3c+m4/5+VR+DuJiKlnrgth8k6WCHHIJBxilve/224e/osfnM8ZPUAUrprHNDqAZyxHAg=="/>
         </item>
     </channel>
 </rss>
