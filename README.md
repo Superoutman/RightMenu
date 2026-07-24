@@ -31,7 +31,6 @@ experience wherever possible, and adds only the features that are truly needed.
 - Copy the full path of selected files and folders from their context menu.
 - View and copy the size of a selected file. Images additionally show pixel
   dimensions and available DPI metadata.
-- Choose which file formats appear in the **New File** submenu.
 - Independently show or hide the menu bar icon and Dock icon.
 - No complicated setup—everything is clear at a glance and ready to use out of the box.
 - Follow the macOS system language automatically, with English, Simplified and
