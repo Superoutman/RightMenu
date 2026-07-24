@@ -37,11 +37,6 @@ experience wherever possible, and adds only the features that are truly needed.
 - Follow the macOS system language automatically, with English, Simplified and
   Traditional Chinese, Japanese, Korean, French, and German included.
 
-Right-click an empty area to create a new file; on the desktop or in the Desktop
-folder, you can also hide or show desktop items. Right-click a file or folder to
-copy its path. When a single file is selected, RightMenu also displays available
-file and image details.
-
 ## Installation
 
 1. Download the latest ZIP from

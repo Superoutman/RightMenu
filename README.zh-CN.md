@@ -32,10 +32,6 @@ RightMenu 通过 macOS 原生 Finder Sync 扩展与 Finder 集成。更干净、
 - 没有复杂的设置，配置一目了然，开箱即用。
 - 自动跟随 macOS 系统语言，内置英文、简体中文、繁体中文、日语、韩语、法语和德语。
 
-在空白处点击右键可以新建文件；在桌面或 Finder 的“桌面”文件夹中，还可以隐藏或显示桌面项目。
-在文件或文件夹上点击右键可以复制其路径。选中单个文件时，RightMenu 还会显示
-可用的文件和图片信息。
-
 ## 安装
 
 1. 从 [GitHub Releases](https://github.com/Superoutman/RightMenu/releases/latest)
