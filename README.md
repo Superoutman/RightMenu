@@ -16,9 +16,14 @@
 
 ![RightMenu Finder context menu](Assets/README/RightMenu.png)
 
+## Philosophy
+
+RightMenu integrates with Finder through the native macOS Finder Sync
+extension. It stays cleaner and more natural, preserves the native system
+experience wherever possible, and adds only the features that are truly needed.
+
 ## Features
 
-- Cleaner and more natural, while preserving the native macOS experience.
 - Create new files directly from the background context menu of any Finder
   folder or the desktop.
 - Create TXT, Markdown, RTF, Word, Excel, PowerPoint, Pages, Numbers, and Keynote
@@ -32,7 +37,6 @@
 - Follow the macOS system language automatically, with English, Simplified and
   Traditional Chinese, Japanese, Korean, French, and German included.
 
-RightMenu integrates with Finder through a native Finder Sync extension.
 Right-click an empty area to create a new file; on the desktop or in the Desktop
 folder, you can also hide or show desktop items. Right-click a file or folder to
 copy its path. When a single file is selected, RightMenu also displays available
