@@ -22,7 +22,7 @@ RightMenu 通过 macOS 原生 Finder Sync 扩展与 Finder 集成。更干净、
 
 ## 功能特色
 
-- 在任意 Finder 文件夹或桌面的空白处，通过右键菜单直接新建文件。
+- 在 Finder 文件夹或桌面的空白处，通过右键菜单直接新建文件。
 - 支持新建 TXT、Markdown、RTF、Word、Excel、PowerPoint、Pages、Numbers
   和 Keynote 文件。
 - 在文件或文件夹的右键菜单中复制完整路径。
@@ -81,6 +81,10 @@ RightMenu 通过 macOS 原生 Finder Sync 扩展与 Finder 集成。更干净、
 - **处理器：** 仅支持 Apple 芯片（`arm64`），不支持 Intel Mac。
 - 发布候选版本使用 macOS 26 的原生界面，并会在发布前于 macOS 15 上完成启动和
   生命周期测试。
+
+**Finder 生效范围：** RightMenu 当前仅支持启动磁盘中的普通 Finder 文件夹；
+外置硬盘、U 盘暂不支持；部分由 iCloud Drive、OneDrive、Dropbox 等管理的
+云盘目录中，菜单可能不会显示。
 
 ## 更新
 

@@ -24,7 +24,7 @@ experience wherever possible, and adds only the features that are truly needed.
 
 ## Features
 
-- Create new files directly from the background context menu of any Finder
+- Create new files directly from the background context menu of a Finder
   folder or the desktop.
 - Create TXT, Markdown, RTF, Word, Excel, PowerPoint, Pages, Numbers, and Keynote
   files.
@@ -97,6 +97,11 @@ above.
   supported.
 - Release candidates use the native macOS 26 presentation and are also
   launched and lifecycle-tested on macOS 15 before publication.
+
+**Finder scope:** RightMenu currently supports only regular Finder folders on
+the startup disk. External drives and USB drives are not currently supported;
+menus may not appear in some cloud storage folders managed by iCloud Drive,
+OneDrive, Dropbox, and similar services.
 
 ## Updates
 
