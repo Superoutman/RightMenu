@@ -18,6 +18,7 @@
 
 ## 功能特色
 
+- 更干净、更自然，保持原生系统体验。
 - 在任意 Finder 文件夹或桌面的空白处，通过右键菜单直接新建文件。
 - 支持新建 TXT、Markdown、RTF、Word、Excel、PowerPoint、Pages、Numbers
   和 Keynote 文件。
@@ -26,7 +27,6 @@
 - 自定义 **新建文件** 子菜单中显示的文件格式。
 - 可分别显示或隐藏菜单栏图标和程序坞图标。
 - 没有复杂的设置，配置一目了然，开箱即用。
-- 通过 Sparkle 接收应用内更新通知。
 - 自动跟随 macOS 系统语言，内置英文、简体中文、繁体中文、日语、韩语、法语和德语。
 
 RightMenu 通过 macOS 原生 Finder Sync 扩展与 Finder 集成。在空白处点击右键

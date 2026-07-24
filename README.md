@@ -18,6 +18,7 @@
 
 ## Features
 
+- Cleaner and more natural, while preserving the native macOS experience.
 - Create new files directly from the background context menu of any Finder
   folder or the desktop.
 - Create TXT, Markdown, RTF, Word, Excel, PowerPoint, Pages, Numbers, and Keynote
@@ -28,7 +29,6 @@
 - Choose which file formats appear in the **New File** submenu.
 - Independently show or hide the menu bar icon and Dock icon.
 - No complicated setup—everything is clear at a glance and ready to use out of the box.
-- Receive in-app update notifications through Sparkle.
 - Follow the macOS system language automatically, with English, Simplified and
   Traditional Chinese, Japanese, Korean, French, and German included.
 
