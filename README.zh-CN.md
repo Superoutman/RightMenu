@@ -8,7 +8,7 @@
 [![Finder Sync](https://img.shields.io/badge/Extension-Finder%20Sync-147EFB?logo=apple&logoColor=white)](https://developer.apple.com/documentation/findersync)
 [![Sparkle](https://img.shields.io/badge/Updates-Sparkle-5E5CE6)](https://sparkle-project.org/)
 
-简洁、原生的 macOS 右键菜单工具。
+**干净、原生的 macOS 右键菜单。**
 
 [下载最新版本](https://github.com/Superoutman/RightMenu/releases/latest)
 

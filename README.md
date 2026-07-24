@@ -8,7 +8,7 @@
 [![Finder Sync](https://img.shields.io/badge/Extension-Finder%20Sync-147EFB?logo=apple&logoColor=white)](https://developer.apple.com/documentation/findersync)
 [![Sparkle](https://img.shields.io/badge/Updates-Sparkle-5E5CE6)](https://sparkle-project.org/)
 
-A clean, native right-click menu.
+**A clean, native right-click menu for macOS.**
 
 [Download the latest release](https://github.com/Superoutman/RightMenu/releases/latest)
 
