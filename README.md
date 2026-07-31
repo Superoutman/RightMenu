@@ -73,6 +73,9 @@ experience wherever possible, and adds only the features that are truly needed.
 - **Native, sandboxed Finder extension:** the context menu is provided through
   Apple's Finder Sync framework, and the extension runs with App Sandbox
   enabled.
+- **Targeted extension lifecycle:** after an app update, RightMenu re-registers
+  its bundled Finder extension without relaunching Finder or interrupting the
+  desktop.
 - **No Accessibility or Finder-control permission:** RightMenu does not request
   Accessibility access or permission to automate and control Finder.
 - **Local file handling:** new files are created and file metadata is inspected
@@ -109,6 +112,15 @@ Settings window.
 
 Every published version is available as a GitHub Release with its update
 archive and English release notes.
+
+The tagged publish pipeline can also copy the verified ZIP to an optional
+Cloudflare R2 download mirror. GitHub Release remains the publication source
+and fallback; the mirror does not change the Sparkle appcast URL. A separate
+manual recovery workflow can backfill the current public release without
+building the app or changing its release, tag, or appcast. A minimal read-only
+Cloudflare Worker serves the private mirror under `/downloads/` on
+its stable `workers.dev` hostname. The stable mirror URL is
+`https://rightmenu.asticosmo.workers.dev/downloads/latest/RightMenu.zip`.
 
 ## Repository contents
 

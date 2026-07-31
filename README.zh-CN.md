@@ -63,6 +63,8 @@ RightMenu 通过 macOS 原生 Finder Sync 扩展与 Finder 集成。更干净、
 
 - **原生沙盒化 Finder 扩展：** 右键菜单通过 Apple Finder Sync 框架提供，扩展在
   启用 App Sandbox 的环境中运行。
+- **精准的扩展生命周期：** App 更新后，RightMenu 会重新注册内置 Finder 扩展，
+  而不会重启 Finder 或打断桌面显示。
 - **无需辅助功能或 Finder 控制权限：** RightMenu 不会申请辅助功能权限，也不会
   申请自动化控制 Finder 的权限。
 - **本地文件处理：** 新文件创建和文件元数据读取均在你的 Mac 本地完成。RightMenu
@@ -90,6 +92,13 @@ RightMenu 会通过本仓库的 Sparkle 更新源检查新版本。发现新版�
 设置窗口中都会出现更新操作。
 
 每个已发布版本都会在 GitHub Release 中提供更新包和英文更新说明。
+
+标签发布流程也可以把验证通过的 ZIP 复制到可选的 Cloudflare R2 下载镜像。
+GitHub Release 仍是发布真源和备用下载源，镜像不会改变 Sparkle appcast 地址。独立的
+手动恢复流程可补录当前公开版本，不构建应用，也不修改 Release、tag 或 appcast。
+最小只读 Cloudflare Worker 通过稳定的 `workers.dev` 主机名和 `/downloads/` 路径提供
+私有 Bucket 中的镜像下载。稳定镜像地址为
+`https://rightmenu.asticosmo.workers.dev/downloads/latest/RightMenu.zip`。
 
 ## 仓库内容
 
