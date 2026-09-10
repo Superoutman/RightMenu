@@ -1,16 +1,4 @@
-<?xml version="1.0" standalone="yes"?>
-<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
-    <channel>
-        <title>RightMenu</title>
-        <item>
-            <title>0.1.43</title>
-            <pubDate>Thu, 10 Sep 2026 13:02:10 +0000</pubDate>
-            <link>https://github.com/Superoutman/RightMenu</link>
-            <sparkle:version>44</sparkle:version>
-            <sparkle:shortVersionString>0.1.43</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[
+
 ### Highlights
 
 - RightMenu releases are now signed with a Developer ID Application identity,
@@ -91,8 +79,3 @@
   ephemeral CI keychain, validates the app and Finder provisioning profiles, and
   removes all credentials before updating the public repository or download mirror.
 
-]]></description>
-            <enclosure url="https://raw.githubusercontent.com/Superoutman/RightMenu/main/RightMenu-0.1.43.zip" length="10453791" type="application/octet-stream" sparkle:edSignature="RqeLEkLUGs8f6ZjlPsNjVxTgmCfSvohbld0amZaTlqNISSlw96+2+66qMHe+UaUBnK59WdGMQycZF03OqMZdDw=="/>
-        </item>
-    </channel>
-</rss>

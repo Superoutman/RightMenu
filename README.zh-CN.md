@@ -2,109 +2,118 @@
 
 [English](README.md) | **简体中文**
 
-[![Swift 6](https://img.shields.io/badge/Swift-6-F05138?logo=swift&logoColor=white)](https://www.swift.org/)
-[![SwiftUI](https://img.shields.io/badge/UI-SwiftUI-0D96F6?logo=swift&logoColor=white)](https://developer.apple.com/xcode/swiftui/)
-[![AppKit](https://img.shields.io/badge/macOS-AppKit-111111?logo=apple&logoColor=white)](https://developer.apple.com/documentation/appkit)
-[![Finder Sync](https://img.shields.io/badge/Extension-Finder%20Sync-147EFB?logo=apple&logoColor=white)](https://developer.apple.com/documentation/findersync)
-[![Sparkle](https://img.shields.io/badge/Updates-Sparkle-5E5CE6)](https://sparkle-project.org/)
+**一个原生、干净自然的 macOS 右键菜单。**
 
-一个原生、干净自然的 macOS 右键菜单。
-
-[下载最新版本](https://github.com/Superoutman/RightMenu/releases/latest)
-
+[下载 RightMenu](https://github.com/Superoutman/RightMenu/releases/latest) ·
 [官方网站](https://superoutman.sol.build/rightmenu/)
+
+macOS 15 及以上 · Apple 芯片 · 支持 7 种语言
 
 ![RightMenu Finder 右键菜单](Assets/README/RightMenu.png)
 
-## 理念
+## 内置核心功能
 
-RightMenu 通过 macOS 原生 Finder Sync 扩展与 Finder 集成。更干净、更自然，尽量保持原生系统体验，只嵌入那些真正需要的功能。
+RightMenu 通过 macOS 原生 Finder Sync 框架扩展 Finder。核心操作始终在本地运行，
+保持精简，并且不依赖任何可选插件。
 
-## 功能特色
-
-- 在 Finder 文件夹或桌面的空白处，通过右键菜单直接新建文件。
-- 支持新建 TXT、Markdown、RTF、Word、Excel、PowerPoint、Pages、Numbers
-  和 Keynote 文件。
-- 在文件或文件夹的右键菜单中复制完整路径。
-- 查看并复制单个文件的大小；图片还会显示像素尺寸和可用的 DPI 元数据。
-- 可分别显示或隐藏菜单栏图标和程序坞图标。
-- 没有复杂的设置，配置一目了然，开箱即用。
+- 在 Finder 文件夹或桌面中直接新建 TXT、Markdown、RTF、Word、Excel、
+  PowerPoint、Pages、Numbers 和 Keynote 文件。
+- 复制一个或多个文件、文件夹的完整路径。
+- 查看并复制文件大小；图片还会显示像素尺寸和可用的 DPI 元数据。
+- 在原生设置中管理登录时启动、菜单栏图标、程序坞图标和启用的文件格式。
 - 自动跟随 macOS 系统语言，内置英文、简体中文、繁体中文、日语、韩语、法语和德语。
 
-## 安装
+## 官方插件
+
+可选功能以独立版本、独立签名的插件交付。插件可以独立演进、更新、失败或卸载，
+无需重新构建 RightMenu，也不会中断宿主的内置 Finder 操作。
+
+| 插件 | 提供的功能 | 当前状态 | 链接 |
+| --- | --- | --- | --- |
+| [Refresh](https://github.com/Superoutman/RightMenu-Refresh) | 在 Finder 背景菜单中添加“刷新”。它仅显示短暂的怀旧闪屏效果，不会实际刷新目录，也不会更改任何文件。 | v1.0.4 | [下载](https://github.com/Superoutman/RightMenu-Refresh/releases/latest/download/RightMenu-Refresh.zip) · [发布说明](https://github.com/Superoutman/RightMenu-Refresh/releases/latest) |
+| [Desktop Items](https://github.com/Superoutman/RightMenu-DesktopItems) | 在桌面空白处和 Finder 的桌面文件夹中添加隐藏或显示桌面文件的菜单，并通过宿主受保护的可恢复操作执行。 | v1.0.2 | [下载](https://github.com/Superoutman/RightMenu-DesktopItems/releases/latest/download/RightMenu-DesktopItems.zip) · [发布说明](https://github.com/Superoutman/RightMenu-DesktopItems/releases/latest) |
+| AI Rename | 使用不透明选择权限提供可审核的 AI 文件重命名。 | 开发中 | 暂未提供 |
+
+“下载”链接始终指向各插件最新的公开版本。
+
+## 安装 RightMenu
 
 1. 从 [GitHub Releases](https://github.com/Superoutman/RightMenu/releases/latest)
-   下载最新 ZIP 文件。
-2. 解压 `RightMenu.app`，并将其移动到 **应用程序** 文件夹。
+   下载最新 ZIP。
+2. 解压 `RightMenu.app` 并移动到 **应用程序** 文件夹。
 3. 启动一次 RightMenu。
-4. 如果 macOS 因无法验证开发者而阻止应用运行，请关闭警告，然后打开
-   **系统设置 > 隐私与安全性**，向下滚动到“安全性”区域，点击 **仍要打开**，
-   再确认 **打开**。
-5. 如果 macOS 要求批准扩展，请前往 **系统设置 > 通用 > 登录项与扩展 >
+4. 如果 macOS 要求批准扩展，请前往 **系统设置 > 通用 > 登录项与扩展 >
    Finder 扩展**，启用 RightMenu。
-6. 如果右键菜单没有立即出现，请重新启动 Finder。
+5. 如果右键菜单没有立即出现，请重新启动 Finder。
 
-> 仅当 RightMenu 来自此官方 GitHub Release 页面时，才应使用 **仍要打开**。
-> 为降低早期开发与分发成本，当前版本没有使用付费 Apple Developer 分发凭据进行
-> 签名和公证。因此 macOS 会显示首次启动安全警告；这并不表示 RightMenu 在你的
-> Mac 上检测到了问题。
+公开版本使用 RightMenu 的 Developer ID Application 身份签名并提交 Apple 公证，
+只有在装订公证票据并通过 Gatekeeper 验收后才会分发。如果验证失败，请勿绕过
+Gatekeeper；请从官方 Release 页面重新下载安装包。
 
-## 使用方法
+## 安装和管理插件
 
-- 在 Finder 文件夹或桌面空白处点击右键，然后选择 **新建文件** 和所需格式。
-- 选中一个或多个文件或文件夹，点击右键并选择 **复制文件路径**。
-- 选中单个文件并点击右键，可以查看和复制文件大小。图片还会在文件大小前显示
-  像素尺寸和可用的 DPI 信息，并以 `｜` 分隔，例如：
-  `2,056 × 1,722 px (300 dpi) ｜ 905 KB`。
-- 可以从菜单栏图标、程序坞图标、启动台或“应用程序”文件夹打开 RightMenu 设置。
-- 在设置中配置文件格式、登录时启动以及图标显示状态。
+打开 **RightMenu 设置 > 插件**，导入签名的 `.rightmenuplugin` 包。也可以在 Finder
+中双击插件包，进入同一个由宿主管理的审核流程。
 
-## 安全与隐私
+RightMenu 会在安装前校验插件包、显示经过认证的发布来源，并让新导入插件直接进入
+访问审核。每组受支持的访问权限都可以独立授予或撤销。停用或删除插件会立即移除它在
+Finder 中的操作，不影响内置功能或其他插件。
 
-- **原生沙盒化 Finder 扩展：** 右键菜单通过 Apple Finder Sync 框架提供，扩展在
-  启用 App Sandbox 的环境中运行。
-- **精准的扩展生命周期：** App 更新后，RightMenu 会重新注册内置 Finder 扩展，
-  而不会重启 Finder 或打断桌面显示。
-- **无需辅助功能或 Finder 控制权限：** RightMenu 不会申请辅助功能权限，也不会
-  申请自动化控制 Finder 的权限。
-- **本地文件处理：** 新文件创建和文件元数据读取均在你的 Mac 本地完成。RightMenu
-  不会上传文件内容、文件名、所选路径、元数据或剪贴板数据。
-- **无追踪：** 应用不包含分析、广告、遥测、账号系统或设备标识符。
-- **更新签名验证：** 安装更新前，Sparkle 会使用应用内置的 EdDSA 公钥验证更新包。
-- **最少的网络活动：** 自动更新检查只会读取公开的 RightMenu 更新源；常规 Finder
-  菜单操作均在本地完成。
+正式插件可以声明经过签名的 HTTPS 更新源。RightMenu 可以提示可用更新，但下载后的
+替换包仍必须通过完整性、签名身份连续性、兼容性和访问权限审核。
 
-这些应用层保护与 Apple 的 Developer ID 和公证检查相互独立。为降低早期开发成本，
-当前版本采用 ad-hoc 代码签名，因此 macOS 会显示上文所述的首次启动安全警告。
+## 信任与安全
 
-## 兼容性
+RightMenu 将四种不同的信任关系明确分开，不把它们混为一个笼统的“认证”：
 
-- **最低系统版本：** macOS 15.0 或更高版本。
-- **处理器：** 仅支持 Apple 芯片（`arm64`），不支持 Intel Mac。
+1. **宿主身份**：macOS 验证 RightMenu 的 Developer ID 签名、Apple 公证和已装订票据。
+2. **插件发布者身份**：每个正式插件都使用 Ed25519 发布者密钥签名。RightMenu 可以
+   识别官方发布者；首次安装其他有效发布者的插件时，用户必须审核完整公钥指纹。
+3. **能力授权**：可信签名不等于运行权限。插件只能调用包内声明、宿主支持并由用户
+   授权的能力，而且每次调用都会重新校验。
+4. **商业授权**：可选付费功能使用独立授权的许可证签名密钥。插件代码无法读取
+   许可证材料、收据、交易或支付凭据。
 
-**Finder 生效范围：** RightMenu 当前仅支持启动磁盘中的普通 Finder 文件夹；
-外置硬盘、U 盘暂不支持；部分由 iCloud Drive、OneDrive、Dropbox 等管理的
-云盘目录中，菜单可能不会显示。
+其他保护措施：
 
-## 更新
+- Finder 扩展运行在沙盒中，并使用失败关闭的 App Group 传输链路。
+- 插件只能获得短期、不透明的选择 token，不能获得文件路径、Finder 或 AppKit 对象、
+  凭据，也没有环境级文件系统权限。
+- 受保护的文件修改和向设备外披露数据仍必须经过宿主原生确认。
+- 内置的新建文件和元数据读取始终在 Mac 本地完成。
+- RightMenu 不包含分析、广告、账号系统或设备标识符。
+- 不需要辅助功能权限，也不需要自动化控制 Finder。
+- 常规 Finder 操作在本地运行；网络访问仅限 RightMenu 更新源和已安装正式插件声明的
+  受限 HTTPS 更新源。
 
-RightMenu 会通过本仓库的 Sparkle 更新源检查新版本。发现新版本后，菜单栏菜单和
-设置窗口中都会出现更新操作。
+## 兼容性与当前限制
 
-每个已发布版本都会在 GitHub Release 中提供更新包和英文更新说明。
+- **系统：** macOS 15.0 或更高版本。
+- **处理器：** 仅支持 Apple 芯片（`arm64`）。
+- **Finder 范围：** 启动磁盘中的普通文件夹和桌面。
+- 暂不支持外置硬盘和 U 盘；部分由 iCloud Drive、OneDrive、Dropbox 等管理的位置
+  可能不会显示菜单。
 
-标签发布流程也可以把验证通过的 ZIP 复制到可选的 Cloudflare R2 下载镜像。
-GitHub Release 仍是发布真源和备用下载源，镜像不会改变 Sparkle appcast 地址。独立的
-手动恢复流程可补录当前公开版本，不构建应用，也不修改 Release、tag 或 appcast。
-最小只读 Cloudflare Worker 通过稳定的 `workers.dev` 主机名和 `/downloads/` 路径提供
-私有 Bucket 中的镜像下载。稳定镜像地址为
-`https://rightmenu.asticosmo.workers.dev/downloads/latest/RightMenu.zip`。
+## 开发插件
 
-## 仓库内容
+安装后的 App 内置 `rightmenu-pluginctl`，无需克隆私有宿主源码即可创建、诊断、签名、
+检查和打包插件。插件业务代码在隔离进程中运行，只通过公开、版本化的 Plugin API 与
+RightMenu 交互。
+
+请阅读 [RightMenu 插件开发指南](https://superoutman.sol.build/rightmenu/plugins/)，了解
+当前插件包格式、API 契约、能力模型、签名流程、验证命令和发布规范。
+
+## 更新与分发
+
+RightMenu 通过公开的 Sparkle 更新源检查应用更新。每个正式版本都有匹配的
+`v<version>` GitHub Release、更新包和发布说明。GitHub Release 是发布真源；可选的
+Cloudflare R2 地址是经过校验的下载镜像。
+
+这个公开仓库只保存面向发布的内容：
 
 - `appcast.xml`：Sparkle 更新源。
-- `RightMenu-<version>.zip`：可下载的应用压缩包。
-- `RightMenu-<version>.md`：对应版本的更新说明。
+- `RightMenu-<version>.zip`：可下载的应用安装包。
+- `RightMenu-<version>.md`：对应版本的发布说明。
+- 英文和简体中文产品文档。
 
-应用源代码在私有仓库中维护。只有推送与版本号匹配的标签后，发布产物才会自动同步
-到此仓库。
+应用源码在私有仓库中维护。只有经过授权的版本标签才会向这里发布匹配的产物和文档。
