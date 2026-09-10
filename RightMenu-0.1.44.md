@@ -1,16 +1,4 @@
-<?xml version="1.0" standalone="yes"?>
-<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
-    <channel>
-        <title>RightMenu</title>
-        <item>
-            <title>0.1.44</title>
-            <pubDate>Thu, 10 Sep 2026 13:29:03 +0000</pubDate>
-            <link>https://github.com/Superoutman/RightMenu</link>
-            <sparkle:version>45</sparkle:version>
-            <sparkle:shortVersionString>0.1.44</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[
+
 ### Important Follow-up
 
 RightMenu 0.1.44 is a small but important follow-up released shortly after
@@ -45,8 +33,3 @@ Users upgrading from an earlier version should open **Settings > Plugins** and
 select **Download Plugins** to install Refresh or Desktop Items if they want
 those optional Finder actions.
 
-]]></description>
-            <enclosure url="https://raw.githubusercontent.com/Superoutman/RightMenu/main/RightMenu-0.1.44.zip" length="10457139" type="application/octet-stream" sparkle:edSignature="OT58W7Ch0IrR1te1X4PHixDs0Os72z+LDKoQG7MT6n/653KJhGEzz3jiFUvG6bykop2xU4LJk+247Ft6wT/RCA=="/>
-        </item>
-    </channel>
-</rss>

@@ -58,7 +58,8 @@ fails; download the archive again from the official Release page.
 ## Install and manage plugins
 
 Open **RightMenu Settings > Plugins** to import a signed `.rightmenuplugin`
-package. You can also double-click a package in Finder to open the same
+package. The same row links directly to the official plugin downloads in this
+repository. You can also double-click a package in Finder to open the same
 host-owned review flow.
 
 RightMenu verifies the package before installation, shows its authenticated
