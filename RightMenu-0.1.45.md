@@ -1,16 +1,4 @@
-<?xml version="1.0" standalone="yes"?>
-<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
-    <channel>
-        <title>RightMenu</title>
-        <item>
-            <title>0.1.45</title>
-            <pubDate>Thu, 10 Sep 2026 15:28:15 +0000</pubDate>
-            <link>https://github.com/Superoutman/RightMenu</link>
-            <sparkle:version>46</sparkle:version>
-            <sparkle:shortVersionString>0.1.45</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[
+
 ### Fixed
 
 - Replaced the hand-written minimal Office packages with validated blank Word,
@@ -35,8 +23,3 @@ Users upgrading from an earlier version can open **Settings > Plugins** and
 select **Download Plugins** to install Refresh or Desktop Items if they want
 those optional Finder actions.
 
-]]></description>
-            <enclosure url="https://raw.githubusercontent.com/Superoutman/RightMenu/main/RightMenu-0.1.45.zip" length="10467057" type="application/octet-stream" sparkle:edSignature="SbNTxWPpTwWaM5Z9uqeGNxQoaY7e6fhFrEfqp4qWtSE5TZdLA7q8O8JJ+YB+gcCeWiSl7xL0ixrkEmmM0NaxDw=="/>
-        </item>
-    </channel>
-</rss>

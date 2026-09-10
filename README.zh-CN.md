@@ -22,8 +22,8 @@ macOS 15 及以上 · Apple 芯片 · 支持 7 种语言
 RightMenu 通过 macOS 原生 Finder Sync 框架扩展 Finder。核心操作始终在本地运行，
 保持精简，并且不依赖任何可选插件。
 
-- 在 Finder 文件夹或桌面中直接新建 TXT、Markdown、RTF、Word、Excel、
-  PowerPoint、Pages、Numbers 和 Keynote 文件。
+- 在 Finder 文件夹或桌面中直接新建 TXT、Markdown、RTF，以及兼容且内容为空的
+  Word、Excel、PowerPoint、Pages、Numbers 和 Keynote 文件。
 - 复制一个或多个文件、文件夹的完整路径。
 - 查看并复制文件大小；图片还会显示像素尺寸和可用的 DPI 元数据。
 - 在原生设置中管理登录时启动、菜单栏图标、程序坞图标和启用的文件格式。

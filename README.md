@@ -22,8 +22,8 @@ macOS 15 or later · Apple silicon · 7 languages
 RightMenu extends Finder through the native Finder Sync framework and keeps its
 core actions local, focused, and independent from optional plugins.
 
-- Create TXT, Markdown, RTF, Word, Excel, PowerPoint, Pages, Numbers, and Keynote
-  files directly in a Finder folder or on the desktop.
+- Create TXT, Markdown, RTF, and valid empty Word, Excel, PowerPoint, Pages,
+  Numbers, and Keynote files directly in a Finder folder or on the desktop.
 - Copy the full path of one or more selected files and folders.
 - View and copy file size. Images also show pixel dimensions and available DPI
   metadata.
