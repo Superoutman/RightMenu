@@ -3,32 +3,22 @@
     <channel>
         <title>RightMenu</title>
         <item>
-            <title>0.1.46</title>
-            <pubDate>Fri, 11 Sep 2026 07:49:07 +0000</pubDate>
+            <title>0.1.47</title>
+            <pubDate>Fri, 11 Sep 2026 16:00:49 +0000</pubDate>
             <link>https://github.com/Superoutman/RightMenu</link>
-            <sparkle:version>47</sparkle:version>
-            <sparkle:shortVersionString>0.1.46</sparkle:shortVersionString>
+            <sparkle:version>48</sparkle:version>
+            <sparkle:shortVersionString>0.1.47</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[
-### Added
-
-- Added a signed, notarized, and stapled DMG with an Applications shortcut for
-  first-time installation without a third-party archive extractor.
-
-### Changed
-
-- GitHub Releases now present the DMG as the only RightMenu manual-install
-  asset. The ZIP remains available only as the background Sparkle update
-  archive, while the R2 mirror continues to serve that verified ZIP.
-
 ### Fixed
 
-- Aligned the plugin deletion button with the grouped settings cards on macOS
-  15 while preserving its established position on macOS 26.
+- Fixed Developer ID signing so macOS can associate both the host app and Finder
+  extension with their embedded provisioning profiles. Accessing RightMenu's own
+  App Group no longer appears as a request to access data from other apps.
 
 ]]></description>
-            <enclosure url="https://raw.githubusercontent.com/Superoutman/RightMenu/main/RightMenu-0.1.46.zip" length="10467051" type="application/octet-stream" sparkle:edSignature="AUE0EGpJrlnlsyPgeDGOvVFvBdMjifPPjh6GxEZCThzZ1eVmeAr+SBGRtbreJH3SCdt6JVom6iPfzrBxKusvCg=="/>
+            <enclosure url="https://raw.githubusercontent.com/Superoutman/RightMenu/main/RightMenu-0.1.47.zip" length="10467158" type="application/octet-stream" sparkle:edSignature="qgKXm/56h9pHh9UW9xtxp7LkBoUNu/zADcYaclxtLekajvbDjwSrnw7iIxriLcBabKB3/tHqksCc+vh9C8cPDg=="/>
         </item>
     </channel>
 </rss>

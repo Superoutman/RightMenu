@@ -149,3 +149,7 @@ This public repository contains release-facing material:
 
 The application source is maintained privately. Release artifacts and matching
 documentation are published here only through an authorized version tag.
+
+Developer ID builds bind both the host app and Finder extension to their
+embedded provisioning profiles, so their private App Group transport does not
+request access to data belonging to other apps.
