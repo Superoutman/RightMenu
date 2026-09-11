@@ -5,6 +5,7 @@ on:
     branches:
       - main
     paths:
+      - "RightMenu-*.dmg"
       - "RightMenu-*.zip"
       - "RightMenu-*.md"
       - "appcast.xml"
@@ -29,17 +30,24 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          archive="$(find . -maxdepth 1 -type f -name 'RightMenu-*.zip' -print -quit)"
-          test -n "$archive"
-          filename="${archive#./}"
-          version="${filename#RightMenu-}"
-          version="${version%.zip}"
+          shopt -s nullglob
+          disk_images=(RightMenu-*.dmg)
+          test "${#disk_images[@]}" -eq 1
+          dmg_name="${disk_images[0]}"
+          version="${dmg_name#RightMenu-}"
+          version="${version%.dmg}"
+          archive="RightMenu-$version.zip"
           notes="RightMenu-$version.md"
+
+          test -f "$archive"
           test -f "$notes"
           test -f appcast.xml
+          grep -Fq "$archive" appcast.xml
+
           echo "VERSION=$version" >> "$GITHUB_ENV"
           echo "TAG=v$version" >> "$GITHUB_ENV"
-          echo "ARCHIVE=$filename" >> "$GITHUB_ENV"
+          echo "DMG=$dmg_name" >> "$GITHUB_ENV"
+          echo "ARCHIVE=$archive" >> "$GITHUB_ENV"
           echo "NOTES=$notes" >> "$GITHUB_ENV"
 
       - name: Create or update GitHub Release
@@ -52,15 +60,20 @@ jobs:
             gh release edit "$TAG" \
               --title "RightMenu $VERSION" \
               --notes-file "$NOTES"
-            gh release upload "$TAG" \
-              "$ARCHIVE" \
-              appcast.xml \
-              --clobber
+            gh release delete-asset "$TAG" "$ARCHIVE" --yes >/dev/null 2>&1 || true
+            gh release delete-asset "$TAG" appcast.xml --yes >/dev/null 2>&1 || true
+            gh release upload "$TAG" "$DMG" --clobber
           else
             gh release create "$TAG" \
-              "$ARCHIVE" \
-              appcast.xml \
+              "$DMG" \
               --target main \
               --title "RightMenu $VERSION" \
               --notes-file "$NOTES"
           fi
+
+          asset_names="$(gh release view "$TAG" --json assets --jq '.assets[].name')"
+          test "$asset_names" = "$DMG" || {
+            echo "GitHub Release must expose only the expected RightMenu DMG." >&2
+            printf 'Actual assets:\n%s\n' "$asset_names" >&2
+            exit 1
+          }
