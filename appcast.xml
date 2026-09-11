@@ -3,40 +3,32 @@
     <channel>
         <title>RightMenu</title>
         <item>
-            <title>0.1.45</title>
-            <pubDate>Thu, 10 Sep 2026 15:28:15 +0000</pubDate>
+            <title>0.1.46</title>
+            <pubDate>Fri, 11 Sep 2026 07:49:07 +0000</pubDate>
             <link>https://github.com/Superoutman/RightMenu</link>
-            <sparkle:version>46</sparkle:version>
-            <sparkle:shortVersionString>0.1.45</sparkle:shortVersionString>
+            <sparkle:version>47</sparkle:version>
+            <sparkle:shortVersionString>0.1.46</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[
+### Added
+
+- Added a signed, notarized, and stapled DMG with an Applications shortcut for
+  first-time installation without a third-party archive extractor.
+
+### Changed
+
+- GitHub Releases now present the DMG as the only RightMenu manual-install
+  asset. The ZIP remains available only as the background Sparkle update
+  archive, while the R2 mirror continues to serve that verified ZIP.
+
 ### Fixed
 
-- Replaced the hand-written minimal Office packages with validated blank Word,
-  Excel, and PowerPoint templates. Newly created Office files now open without
-  repair warnings and contain no visible starter content.
-- Strengthened core verification so it checks required OOXML parts at the ZIP
-  root instead of accepting any file with a ZIP header.
-
-### Highlights from 0.1.43
-
-If you missed the recent major update, RightMenu now includes:
-
-- An independently versioned, signed plugin platform with secure importing,
-  publisher verification, access review, updates, and isolated execution.
-- Refresh and Desktop Items as separately downloadable official plugins.
-- Developer ID signing, Apple notarization, stapling, and Gatekeeper
-  verification for public releases.
-- New File, Copy File Path, and file information kept built into RightMenu and
-  independent from optional plugins.
-
-Users upgrading from an earlier version can open **Settings > Plugins** and
-select **Download Plugins** to install Refresh or Desktop Items if they want
-those optional Finder actions.
+- Aligned the plugin deletion button with the grouped settings cards on macOS
+  15 while preserving its established position on macOS 26.
 
 ]]></description>
-            <enclosure url="https://raw.githubusercontent.com/Superoutman/RightMenu/main/RightMenu-0.1.45.zip" length="10467057" type="application/octet-stream" sparkle:edSignature="SbNTxWPpTwWaM5Z9uqeGNxQoaY7e6fhFrEfqp4qWtSE5TZdLA7q8O8JJ+YB+gcCeWiSl7xL0ixrkEmmM0NaxDw=="/>
+            <enclosure url="https://raw.githubusercontent.com/Superoutman/RightMenu/main/RightMenu-0.1.46.zip" length="10467051" type="application/octet-stream" sparkle:edSignature="AUE0EGpJrlnlsyPgeDGOvVFvBdMjifPPjh6GxEZCThzZ1eVmeAr+SBGRtbreJH3SCdt6JVom6iPfzrBxKusvCg=="/>
         </item>
     </channel>
 </rss>

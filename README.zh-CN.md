@@ -45,16 +45,16 @@ RightMenu 通过 macOS 原生 Finder Sync 框架扩展 Finder。核心操作始�
 ## 安装 RightMenu
 
 1. 从 [GitHub Releases](https://github.com/Superoutman/RightMenu/releases/latest)
-   下载最新 ZIP。
-2. 解压 `RightMenu.app` 并移动到 **应用程序** 文件夹。
+   下载最新 DMG。
+2. 打开 DMG，将 `RightMenu.app` 拖入 **应用程序** 文件夹。
 3. 启动一次 RightMenu。
 4. 如果 macOS 要求批准扩展，请前往 **系统设置 > 通用 > 登录项与扩展 >
    Finder 扩展**，启用 RightMenu。
 5. 如果右键菜单没有立即出现，请重新启动 Finder。
 
 公开版本使用 RightMenu 的 Developer ID Application 身份签名并提交 Apple 公证，
-只有在装订公证票据并通过 Gatekeeper 验收后才会分发。如果验证失败，请勿绕过
-Gatekeeper；请从官方 Release 页面重新下载安装包。
+只有在 App 与 DMG 的公证票据完成装订并通过 Gatekeeper 验收后才会分发。
+如果验证失败，请勿绕过 Gatekeeper；请从官方 Release 页面重新下载 DMG。
 
 ## 安装和管理插件
 
@@ -113,13 +113,15 @@ RightMenu 交互。
 ## 更新与分发
 
 RightMenu 通过公开的 Sparkle 更新源检查应用更新。每个正式版本都有匹配的
-`v<version>` GitHub Release、更新包和发布说明。GitHub Release 是发布真源；可选的
-Cloudflare R2 地址是经过校验的下载镜像。
+`v<version>` GitHub Release、手动安装 DMG 和发布说明。GitHub Release 是发布真源；
+可选的 Cloudflare R2 地址镜像后台 Sparkle ZIP。
 
 这个公开仓库只保存面向发布的内容：
 
 - `appcast.xml`：Sparkle 更新源。
-- `RightMenu-<version>.zip`：可下载的应用安装包。
+- `RightMenu-<version>.zip`：后台 Sparkle 更新归档，不作为 GitHub Releases
+  的手动安装附件展示。
+- `RightMenu-<version>.dmg`：GitHub Releases 展示的已签名、公证手动安装包。
 - `RightMenu-<version>.md`：对应版本的发布说明。
 - 英文和简体中文产品文档。
 

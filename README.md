@@ -48,18 +48,18 @@ The Download links always resolve to the latest public release of each plugin.
 
 ## Install RightMenu
 
-1. Download the latest ZIP from
+1. Download the latest DMG from
    [GitHub Releases](https://github.com/Superoutman/RightMenu/releases/latest).
-2. Extract `RightMenu.app` and move it to **Applications**.
+2. Open the DMG and drag `RightMenu.app` to **Applications**.
 3. Open RightMenu once.
 4. If macOS asks for approval, enable RightMenu under **System Settings >
    General > Login Items & Extensions > Finder Extensions**.
 5. Relaunch Finder if the context menu does not appear immediately.
 
 Public releases are signed with the RightMenu Developer ID Application identity,
-notarized by Apple, and distributed only after the notarization ticket is
-stapled and Gatekeeper validation passes. Do not bypass Gatekeeper if validation
-fails; download the archive again from the official Release page.
+notarized by Apple, and distributed only after the app and DMG notarization
+tickets are stapled and Gatekeeper validation passes. Do not bypass Gatekeeper
+if validation fails; download the DMG again from the official Release page.
 
 ## Install and manage plugins
 
@@ -133,14 +133,17 @@ validation commands, and release guidance.
 ## Updates and distribution
 
 RightMenu checks the public Sparkle feed for application updates. Every published
-version has a matching `v<version>` GitHub Release with an update archive and
+version has a matching `v<version>` GitHub Release with a manual-install DMG and
 release notes. GitHub Release is the publication source; the optional Cloudflare
-R2 endpoint is a verified download mirror.
+R2 endpoint mirrors the background Sparkle ZIP.
 
 This public repository contains release-facing material:
 
 - `appcast.xml` — the Sparkle update feed.
-- `RightMenu-<version>.zip` — the downloadable application archive.
+- `RightMenu-<version>.zip` — the background Sparkle update archive; it is not
+  offered as the manual-install asset on GitHub Releases.
+- `RightMenu-<version>.dmg` — the signed, notarized manual installer shown on
+  GitHub Releases.
 - `RightMenu-<version>.md` — release notes for that version.
 - English and Simplified Chinese product documentation.
 
