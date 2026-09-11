@@ -8,7 +8,7 @@
 [![Finder Sync](https://img.shields.io/badge/Extension-Finder%20Sync-147EFB?logo=apple&logoColor=white)](https://developer.apple.com/documentation/findersync)
 [![Sparkle](https://img.shields.io/badge/Updates-Sparkle-5E5CE6)](https://sparkle-project.org/)
 
-**A clean, native right-click menu for macOS.**
+**RightMenu is a clean, native right-click menu for macOS that enhances Finder with useful built-in tools and an extensible plugin system. Create files, copy paths, inspect file information, install optional plugins, or build your own extensions with its public Plugin API—all while keeping the experience lightweight, local, and native to macOS.**
 
 [Download RightMenu](https://github.com/Superoutman/RightMenu/releases/latest) ·
 [Official website](https://superoutman.sol.build/rightmenu/)

@@ -8,7 +8,7 @@
 [![Finder Sync](https://img.shields.io/badge/Extension-Finder%20Sync-147EFB?logo=apple&logoColor=white)](https://developer.apple.com/documentation/findersync)
 [![Sparkle](https://img.shields.io/badge/Updates-Sparkle-5E5CE6)](https://sparkle-project.org/)
 
-**一个原生、干净自然的 macOS 右键菜单。**
+**RightMenu 是一款简洁、原生的 macOS 右键菜单工具，通过实用的内置工具和可扩展的插件系统增强 Finder。你可以创建文件、复制路径、查看文件信息、安装可选插件，或使用其公开的插件 API 构建自己的扩展，同时保持轻量、本地运行，并提供原生的 macOS 使用体验。**
 
 [下载 RightMenu](https://github.com/Superoutman/RightMenu/releases/latest) ·
 [官方网站](https://superoutman.sol.build/rightmenu/)
