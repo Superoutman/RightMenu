@@ -25,7 +25,7 @@ RightMenu 通过 macOS 原生 Finder Sync 框架扩展 Finder。核心操作始�
 - 在 Finder 文件夹或桌面中直接新建 TXT、Markdown、RTF，以及兼容且内容为空的
   Word、Excel、PowerPoint、Pages、Numbers 和 Keynote 文件。
 - 复制一个或多个文件、文件夹的完整路径。
-- 查看并复制文件大小；图片还会显示像素尺寸和可用的 DPI 元数据。
+- 在支持的 macOS 版本上查看并复制文件大小；图片还会显示像素尺寸和可用的 DPI 元数据。
 - 在原生设置中管理登录时启动、菜单栏图标、程序坞图标和启用的文件格式。
 - 自动跟随 macOS 系统语言，内置英文、简体中文、繁体中文、日语、韩语、法语和德语。
 
@@ -37,7 +37,7 @@ RightMenu 通过 macOS 原生 Finder Sync 框架扩展 Finder。核心操作始�
 | 插件 | 提供的功能 | 当前状态 | 链接 |
 | --- | --- | --- | --- |
 | [Refresh](https://github.com/Superoutman/RightMenu-Refresh) | 在 Finder 背景菜单中添加“刷新”。它仅显示短暂的怀旧闪屏效果，不会实际刷新目录，也不会更改任何文件。 | v1.0.4 | [下载](https://github.com/Superoutman/RightMenu-Refresh/releases/latest/download/RightMenu-Refresh.zip) · [发布说明](https://github.com/Superoutman/RightMenu-Refresh/releases/latest) |
-| [Desktop Items](https://github.com/Superoutman/RightMenu-DesktopItems) | 在桌面空白处和 Finder 的桌面文件夹中添加隐藏或显示桌面文件的菜单，并通过宿主受保护的可恢复操作执行。 | v1.0.2 | [下载](https://github.com/Superoutman/RightMenu-DesktopItems/releases/latest/download/RightMenu-DesktopItems.zip) · [发布说明](https://github.com/Superoutman/RightMenu-DesktopItems/releases/latest) |
+| [Desktop Items](https://github.com/Superoutman/RightMenu-DesktopItems) | 在桌面空白处和 Finder 的桌面文件夹中添加隐藏或显示桌面文件的菜单，并通过宿主受保护的可恢复操作执行，包括用户拥有的只读文件。 | v1.0.2 | [下载](https://github.com/Superoutman/RightMenu-DesktopItems/releases/latest/download/RightMenu-DesktopItems.zip) · [发布说明](https://github.com/Superoutman/RightMenu-DesktopItems/releases/latest) |
 | AI Rename | 使用不透明选择权限提供可审核的 AI 文件重命名。 | 开发中 | 暂未提供 |
 
 “下载”链接始终指向各插件最新的公开版本。

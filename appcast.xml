@@ -3,22 +3,25 @@
     <channel>
         <title>RightMenu</title>
         <item>
-            <title>0.1.47</title>
-            <pubDate>Fri, 11 Sep 2026 16:00:49 +0000</pubDate>
+            <title>0.1.48</title>
+            <pubDate>Tue, 15 Sep 2026 13:25:39 +0000</pubDate>
             <link>https://github.com/Superoutman/RightMenu</link>
-            <sparkle:version>48</sparkle:version>
-            <sparkle:shortVersionString>0.1.47</sparkle:shortVersionString>
+            <sparkle:version>49</sparkle:version>
+            <sparkle:shortVersionString>0.1.48</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[
 ### Fixed
 
-- Fixed Developer ID signing so macOS can associate both the host app and Finder
-  extension with their embedded provisioning profiles. Accessing RightMenu's own
-  App Group no longer appears as a request to access data from other apps.
+- Desktop Items can now hide and restore user-owned read-only files without
+  changing their permissions or other file flags. A read-only item no longer
+  causes the guarded desktop visibility transaction to roll back.
+- Restored the copyable file information line on macOS 27, including image
+  dimensions and available DPI metadata, after validating the existing bounded
+  metadata lookup and recovery path on the new system version.
 
 ]]></description>
-            <enclosure url="https://raw.githubusercontent.com/Superoutman/RightMenu/main/RightMenu-0.1.47.zip" length="10467158" type="application/octet-stream" sparkle:edSignature="qgKXm/56h9pHh9UW9xtxp7LkBoUNu/zADcYaclxtLekajvbDjwSrnw7iIxriLcBabKB3/tHqksCc+vh9C8cPDg=="/>
+            <enclosure url="https://raw.githubusercontent.com/Superoutman/RightMenu/main/RightMenu-0.1.48.zip" length="10470321" type="application/octet-stream" sparkle:edSignature="JNGYriShyQ6+geCQXnuW1Kih6L+K4StEOenTBLPIGnG8SBBsS7jnPTw14+dq5I4k++4UCUkUW8R6uFgZUscABg=="/>
         </item>
     </channel>
 </rss>

@@ -25,8 +25,8 @@ core actions local, focused, and independent from optional plugins.
 - Create TXT, Markdown, RTF, and valid empty Word, Excel, PowerPoint, Pages,
   Numbers, and Keynote files directly in a Finder folder or on the desktop.
 - Copy the full path of one or more selected files and folders.
-- View and copy file size. Images also show pixel dimensions and available DPI
-  metadata.
+- View and copy file size across supported macOS releases. Images also show
+  pixel dimensions and available DPI metadata.
 - Control launch at login, the menu bar icon, the Dock icon, and enabled file
   formats from native Settings.
 - Follow the macOS system language automatically in English, Simplified Chinese,
@@ -41,7 +41,7 @@ interrupting its built-in Finder actions.
 | Plugin | What it adds | Status | Links |
 | --- | --- | --- | --- |
 | [Refresh](https://github.com/Superoutman/RightMenu-Refresh) | Adds Refresh to Finder background menus. It shows a brief nostalgic flash without actually refreshing the folder or changing files. | v1.0.4 | [Download](https://github.com/Superoutman/RightMenu-Refresh/releases/latest/download/RightMenu-Refresh.zip) · [Release notes](https://github.com/Superoutman/RightMenu-Refresh/releases/latest) |
-| [Desktop Items](https://github.com/Superoutman/RightMenu-DesktopItems) | Adds Hide or Show Desktop Items to the desktop background and Finder's Desktop folder through a guarded, recoverable host action. | v1.0.2 | [Download](https://github.com/Superoutman/RightMenu-DesktopItems/releases/latest/download/RightMenu-DesktopItems.zip) · [Release notes](https://github.com/Superoutman/RightMenu-DesktopItems/releases/latest) |
+| [Desktop Items](https://github.com/Superoutman/RightMenu-DesktopItems) | Adds Hide or Show Desktop Items to the desktop background and Finder's Desktop folder through a guarded, recoverable host action, including user-owned read-only items. | v1.0.2 | [Download](https://github.com/Superoutman/RightMenu-DesktopItems/releases/latest/download/RightMenu-DesktopItems.zip) · [Release notes](https://github.com/Superoutman/RightMenu-DesktopItems/releases/latest) |
 | AI Rename | Provides reviewable AI-assisted file renaming using opaque selection access. | In development | Not available |
 
 The Download links always resolve to the latest public release of each plugin.
