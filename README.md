@@ -11,7 +11,7 @@
 **RightMenu is a clean, native right-click menu for macOS that enhances Finder with useful built-in tools and an extensible plugin system. Create files, copy paths, inspect file information, install optional plugins, or build your own extensions with its public Plugin API—all while keeping the experience lightweight, local, and native to macOS.**
 
 [Download RightMenu](https://github.com/Superoutman/RightMenu/releases/latest) ·
-[Official website](https://superoutman.sol.build/rightmenu/)
+[Official website](https://rightmenu.0x01.build/)
 
 macOS 15 or later · Apple silicon · 7 languages
 
@@ -126,7 +126,7 @@ sign, inspect, and pack a plugin without cloning the private host source. Plugin
 business code runs in an isolated process and interacts with RightMenu only
 through the public, versioned Plugin API.
 
-Read the [RightMenu plugin development guide](https://superoutman.sol.build/rightmenu/plugins/)
+Read the [RightMenu plugin development guide](https://rightmenu.0x01.build/plugins/)
 for the current package format, API contract, capability model, signing flow,
 validation commands, and release guidance.
 

@@ -11,7 +11,7 @@
 **RightMenu 是一款简洁、原生的 macOS 右键菜单工具，通过实用的内置工具和可扩展的插件系统增强 Finder。你可以创建文件、复制路径、查看文件信息、安装可选插件，或使用其公开的插件 API 构建自己的扩展，同时保持轻量、本地运行，并提供原生的 macOS 使用体验。**
 
 [下载 RightMenu](https://github.com/Superoutman/RightMenu/releases/latest) ·
-[官方网站](https://superoutman.sol.build/rightmenu/)
+[官方网站](https://rightmenu.0x01.build/)
 
 macOS 15 及以上 · Apple 芯片 · 支持 7 种语言
 
@@ -107,7 +107,7 @@ RightMenu 将四种不同的信任关系明确分开，不把它们混为一个�
 检查和打包插件。插件业务代码在隔离进程中运行，只通过公开、版本化的 Plugin API 与
 RightMenu 交互。
 
-请阅读 [RightMenu 插件开发指南](https://superoutman.sol.build/rightmenu/plugins/)，了解
+请阅读 [RightMenu 插件开发指南](https://rightmenu.0x01.build/plugins/)，了解
 当前插件包格式、API 契约、能力模型、签名流程、验证命令和发布规范。
 
 ## 更新与分发
