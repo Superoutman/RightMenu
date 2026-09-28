@@ -63,9 +63,9 @@ interrupting its built-in Finder actions.
 | --- | --- | --- | --- |
 | [Refresh](https://github.com/Superoutman/RightMenu-Refresh) | Adds Refresh to Finder background menus. It shows a brief nostalgic flash without actually refreshing the folder or changing files. | v1.0.4 | [Download](https://github.com/Superoutman/RightMenu-Refresh/releases/latest/download/RightMenu-Refresh.zip) · [Release notes](https://github.com/Superoutman/RightMenu-Refresh/releases/latest) |
 | [Desktop Items](https://github.com/Superoutman/RightMenu-DesktopItems) | Adds Hide or Show Desktop Items to the desktop background and Finder's Desktop folder through a guarded, recoverable host action, including user-owned read-only items. | v1.0.2 | [Download](https://github.com/Superoutman/RightMenu-DesktopItems/releases/latest/download/RightMenu-DesktopItems.zip) · [Release notes](https://github.com/Superoutman/RightMenu-DesktopItems/releases/latest) |
-| AI Rename | Provides reviewable AI-assisted file renaming using opaque selection access. | In development | Not available |
+| [AI Rename](https://github.com/Superoutman/RightMenu-AIRename) | AI-assisted image and document renaming with review and undo. Requires RightMenu 0.1.70+; the current public host 0.1.68 is not yet compatible. | v0.2.30 **Beta** | [Download](https://github.com/Superoutman/RightMenu-AIRename/releases/download/v0.2.30/RightMenu-AIRename.zip) · [Release notes](https://github.com/Superoutman/RightMenu-AIRename/releases/tag/v0.2.30) |
 
-The Download links always resolve to the latest public release of each plugin.
+Download links point to each plugin’s current release. Beta downloads use explicit version links because GitHub excludes pre-releases from /releases/latest.
 
 ## Install RightMenu
 
