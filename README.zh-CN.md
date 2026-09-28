@@ -15,6 +15,10 @@
 
 macOS 15 及以上 · Apple 芯片 · 支持 7 种语言
 
+0.1.71 将插件首次访问与已声明的 AI 外发类别合并确认，保留此前批准的类别；拒绝不新增授权，关闭时撤销同意。包含有界的所选文件读取能力及 Beta 标记。
+
+0.1.69 支持插件声明 `releaseStage: "beta"`，在插件列表与详情名称旁显示蓝色 BETA 标记；未声明或未知阶段不显示，不影响启用状态和权限。
+
 0.1.68 让已启用且满足使用条件的插件菜单持续可用，不再按时间过期，也无需定时续期。设置变更立即更新菜单，启动、唤醒和重新激活时核对状态；点击执行仍重新验证插件、权限及使用资格。
 
 0.1.67 候选版在「AI 提供商」登录成功后显示模型选择：从独立 Codex CLI 配置读取模型列表，保存宿主全局选择，并作用于后续 AI 请求；选择「默认模型」则跟随 CLI 默认设置。列表失败可刷新重试，不会自动覆盖已保存的型号。
@@ -42,9 +46,9 @@ RightMenu 通过 macOS 原生 Finder Sync 框架扩展 Finder。核心操作始�
 | --- | --- | --- | --- |
 | [Refresh](https://github.com/Superoutman/RightMenu-Refresh) | 在 Finder 背景菜单中添加“刷新”。它仅显示短暂的怀旧闪屏效果，不会实际刷新目录，也不会更改任何文件。 | v1.0.4 | [下载](https://github.com/Superoutman/RightMenu-Refresh/releases/latest/download/RightMenu-Refresh.zip) · [发布说明](https://github.com/Superoutman/RightMenu-Refresh/releases/latest) |
 | [Desktop Items](https://github.com/Superoutman/RightMenu-DesktopItems) | 在桌面空白处和 Finder 的桌面文件夹中添加隐藏或显示桌面文件的菜单，并通过宿主受保护的可恢复操作执行，包括用户拥有的只读文件。 | v1.0.2 | [下载](https://github.com/Superoutman/RightMenu-DesktopItems/releases/latest/download/RightMenu-DesktopItems.zip) · [发布说明](https://github.com/Superoutman/RightMenu-DesktopItems/releases/latest) |
-| [AI Rename](https://github.com/Superoutman/RightMenu-AIRename) | 根据图片和文档内容生成文件名，支持审阅及撤销。需要 RightMenu 0.1.70+；当前公开宿主 0.1.68 尚不兼容。 | v0.2.30 **Beta** | [下载](https://github.com/Superoutman/RightMenu-AIRename/releases/download/v0.2.30/RightMenu-AIRename.zip) · [发布说明](https://github.com/Superoutman/RightMenu-AIRename/releases/tag/v0.2.30) |
+| AI Rename | 使用不透明选择权限提供可审核的 AI 文件重命名。 | 开发中 | 暂未提供 |
 
-“下载”链接指向各插件当前发布版本。Beta 使用明确版本链接，因为 GitHub 的 /releases/latest 不包含预发布版本。
+“下载”链接始终指向各插件最新的公开版本。
 
 ## 安装 RightMenu
 

@@ -3,21 +3,22 @@
     <channel>
         <title>RightMenu</title>
         <item>
-            <title>0.1.68</title>
-            <pubDate>Mon, 28 Sep 2026 02:00:15 +0000</pubDate>
+            <title>0.1.71</title>
+            <pubDate>Mon, 28 Sep 2026 08:28:08 +0000</pubDate>
             <link>https://github.com/Superoutman/RightMenu</link>
-            <sparkle:version>69</sparkle:version>
-            <sparkle:shortVersionString>0.1.68</sparkle:shortVersionString>
+            <sparkle:version>72</sparkle:version>
+            <sparkle:shortVersionString>0.1.71</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[
-- Include the previously unpublished host improvements: isolated provider sign-in and model selection, local image analysis and WebP support, consent-gated image AI, and controlled rename extensions. Plugins retain independent releases.
-- Keep enabled, eligible Finder plugin menus persistent until state changes; remove menu expiry and renewal timers. Reconcile on startup, wake and host activation without making visibility depend on those events.
-- Separate persistent menu schema v4 from unchanged 30-second invocation requests (v3). Read legacy v3 menu snapshots, including expired ones, as display hints only. Package, permission, entitlement and file checks still run before execution.
-- Cover persistent storage, stopped hosts, state changes, legacy migration and stale-menu authorization rejection. Preserve native Settings appearance and core actions.
+- Combine declared plugin access and AI data disclosure in one initial confirmation using generic `aiDisclosureCategories`. Denial adds no grants; turning access off revokes disclosure consent. Update descriptions in seven languages.
+- Include optional BETA badges in plugin lists and detail headers, and bounded, explicitly authorized `files.readBytes` for current selections. Remote AI still requires selected-file-content disclosure.
+
+- Preserve accumulated per-plugin/provider data disclosure grants when additional categories are approved, preventing repeated prompts caused by overwriting earlier grants. Revocation still clears all grants; no new category is auto-approved.
+- Localize original filename disclosure and add persistent-store regression checks for accumulated consent, reload, isolation and revocation.
 
 ]]></description>
-            <enclosure url="https://raw.githubusercontent.com/Superoutman/RightMenu/main/RightMenu-0.1.68.zip" length="10727135" type="application/octet-stream" sparkle:edSignature="iBSQLkFus1NAEQgako+agc2epC2YAL+GKEn32DFsgH+Q91Slk4GUaF+ihfwTJTtL/fvUKdVnVqRqg2csnaN5BQ=="/>
+            <enclosure url="https://raw.githubusercontent.com/Superoutman/RightMenu/main/RightMenu-0.1.71.zip" length="10796201" type="application/octet-stream" sparkle:edSignature="JRzENcae1Dd1fSx9GtFexUiiXw0CMeqeauZv0mfbA+s2hzQC802P6er7SDBcRAZD7qnqRMqna2Cu1mOd5HQ1Cw=="/>
         </item>
     </channel>
 </rss>

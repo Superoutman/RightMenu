@@ -15,6 +15,12 @@
 
 macOS 15 or later · Apple silicon · 7 languages
 
+0.1.71 combines declared plugin access and AI disclosure in one initial confirmation, and preserves previously approved AI data categories when a user approves additional categories for the same plugin/provider. New categories still require consent; revocation clears all categories. Original filenames are localized in the disclosure prompt.
+
+0.1.70 adds format-independent `files.readBytes` for explicitly authorized current selections. Plugins own format parsing; the host bounds snapshots and chunks, verifies file identity, and forces separate selected-file-content disclosure for remote AI. See [contract](Documentation/PLUGIN_FILE_READ_EXTENSION.md).
+
+0.1.69 supports optional plugin `releaseStage: "beta"` metadata, displaying a blue BETA badge in the plugin list and detail header. Missing or unknown stages show no badge.
+
 0.1.68 keeps enabled, eligible plugin menus available without a time limit or renewal timer. Settings changes update menus immediately; startup, wake and activation reconcile state. Clicking an action still requires current package, permission and entitlement validation.
 
 0.1.67 candidate adds a model picker after provider sign-in. Models come from the isolated Codex CLI catalog; the saved host-wide choice is passed to subsequent AI requests. “Default Model” follows the CLI default. The Chinese section heading is “AI 提供商”.
@@ -63,9 +69,9 @@ interrupting its built-in Finder actions.
 | --- | --- | --- | --- |
 | [Refresh](https://github.com/Superoutman/RightMenu-Refresh) | Adds Refresh to Finder background menus. It shows a brief nostalgic flash without actually refreshing the folder or changing files. | v1.0.4 | [Download](https://github.com/Superoutman/RightMenu-Refresh/releases/latest/download/RightMenu-Refresh.zip) · [Release notes](https://github.com/Superoutman/RightMenu-Refresh/releases/latest) |
 | [Desktop Items](https://github.com/Superoutman/RightMenu-DesktopItems) | Adds Hide or Show Desktop Items to the desktop background and Finder's Desktop folder through a guarded, recoverable host action, including user-owned read-only items. | v1.0.2 | [Download](https://github.com/Superoutman/RightMenu-DesktopItems/releases/latest/download/RightMenu-DesktopItems.zip) · [Release notes](https://github.com/Superoutman/RightMenu-DesktopItems/releases/latest) |
-| [AI Rename](https://github.com/Superoutman/RightMenu-AIRename) | AI-assisted image and document renaming with review and undo. Requires RightMenu 0.1.70+; the current public host 0.1.68 is not yet compatible. | v0.2.30 **Beta** | [Download](https://github.com/Superoutman/RightMenu-AIRename/releases/download/v0.2.30/RightMenu-AIRename.zip) · [Release notes](https://github.com/Superoutman/RightMenu-AIRename/releases/tag/v0.2.30) |
+| AI Rename | Provides reviewable AI-assisted file renaming using opaque selection access. | In development | Not available |
 
-Download links point to each plugin’s current release. Beta downloads use explicit version links because GitHub excludes pre-releases from /releases/latest.
+The Download links always resolve to the latest public release of each plugin.
 
 ## Install RightMenu
 
@@ -210,3 +216,5 @@ the session and releases its selected-file access.
 
 Finder plugin invocations transfer ephemeral URL bookmarks through the private
 App Group; the host revalidates file identity before invoking a plugin.
+
+- 0.1.71：支持通用 `aiDisclosureCategories` 声明，将当前插件权限和 AI 外发同意合并确认；拒绝不新增授权，关闭撤销外发同意，权限描述同步七种语言。
