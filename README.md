@@ -2,13 +2,7 @@
 
 **English** | [简体中文](README.zh-CN.md)
 
-[![Swift 6](https://img.shields.io/badge/Swift-6-F05138?logo=swift&logoColor=white)](https://www.swift.org/)
-[![SwiftUI](https://img.shields.io/badge/UI-SwiftUI-0D96F6?logo=swift&logoColor=white)](https://developer.apple.com/xcode/swiftui/)
-[![AppKit](https://img.shields.io/badge/macOS-AppKit-111111?logo=apple&logoColor=white)](https://developer.apple.com/documentation/appkit)
-[![Finder Sync](https://img.shields.io/badge/Extension-Finder%20Sync-147EFB?logo=apple&logoColor=white)](https://developer.apple.com/documentation/findersync)
-[![Sparkle](https://img.shields.io/badge/Updates-Sparkle-5E5CE6)](https://sparkle-project.org/)
-
-**RightMenu is a clean, native right-click menu for macOS that enhances Finder with useful built-in tools and an extensible plugin system. Create files, copy paths, inspect file information, install optional plugins, or build your own extensions with its public Plugin API—all while keeping the experience lightweight, local, and native to macOS.**
+**RightMenu adds useful tools to your macOS right-click menu. Create files, copy paths, and inspect file information in Finder, with optional plugins for more features.**
 
 [Download RightMenu](https://github.com/Superoutman/RightMenu/releases/latest) ·
 [Official website](https://rightmenu.0x01.build/)
@@ -19,8 +13,7 @@ macOS 15 or later · Apple silicon · 7 languages
 
 ## Built-in essentials
 
-RightMenu extends Finder through the native Finder Sync framework and keeps its
-core actions local, focused, and independent from optional plugins.
+These features work locally on your Mac without installing any plugins.
 
 - Create TXT, Markdown, RTF, and valid empty Word, Excel, PowerPoint, Pages,
   Numbers, and Keynote files directly in a Finder folder or on the desktop.
@@ -34,17 +27,15 @@ core actions local, focused, and independent from optional plugins.
 
 ## Official plugins
 
-Optional features are delivered as independently versioned and signed plugins.
-A plugin can evolve, update, fail, or be removed without rebuilding RightMenu or
-interrupting its built-in Finder actions.
+Install only the plugins you need. Plugins can be updated or removed independently.
 
 | Plugin | What it adds | Status | Links |
 | --- | --- | --- | --- |
 | [Refresh](https://github.com/Superoutman/RightMenu-Refresh) | Adds Refresh to Finder background menus. It shows a brief nostalgic flash without actually refreshing the folder or changing files. | v1.0.4 | [Download](https://github.com/Superoutman/RightMenu-Refresh/releases/latest/download/RightMenu-Refresh.zip) · [Release notes](https://github.com/Superoutman/RightMenu-Refresh/releases/latest) |
-| [Desktop Items](https://github.com/Superoutman/RightMenu-DesktopItems) | Adds Hide or Show Desktop Items to the desktop background and Finder's Desktop folder through a guarded, recoverable host action, including user-owned read-only items. | v1.0.2 | [Download](https://github.com/Superoutman/RightMenu-DesktopItems/releases/latest/download/RightMenu-DesktopItems.zip) · [Release notes](https://github.com/Superoutman/RightMenu-DesktopItems/releases/latest) |
+| [Desktop Items](https://github.com/Superoutman/RightMenu-DesktopItems) | Hide or show desktop items from the desktop or Finder's Desktop folder. | v1.0.2 | [Download](https://github.com/Superoutman/RightMenu-DesktopItems/releases/latest/download/RightMenu-DesktopItems.zip) · [Release notes](https://github.com/Superoutman/RightMenu-DesktopItems/releases/latest) |
 | [AI Rename](https://github.com/Superoutman/RightMenu-AIRename) | AI-assisted image and document renaming with review and undo. Requires RightMenu 0.1.70+; 0.1.71+ is recommended. | v0.2.30 **Beta** | [Download](https://github.com/Superoutman/RightMenu-AIRename/releases/download/v0.2.30/RightMenu-AIRename.zip) · [Release notes](https://github.com/Superoutman/RightMenu-AIRename/releases/tag/v0.2.30) |
 
-Download links point to each plugin’s current release. Beta downloads use explicit version links because GitHub excludes pre-releases from /releases/latest.
+Plugins marked **Beta** are still being tested.
 
 ## Install RightMenu
 
@@ -56,75 +47,23 @@ Download links point to each plugin’s current release. Beta downloads use expl
    General > Login Items & Extensions > Finder Extensions**.
 5. Relaunch Finder if the context menu does not appear immediately.
 
-Public releases are signed with the RightMenu Developer ID Application identity,
-notarized by Apple, and distributed only after the app and DMG notarization
-tickets are stapled and Gatekeeper validation passes. Do not bypass Gatekeeper
-if validation fails; download the DMG again from the official Release page.
+RightMenu is developer-signed and notarized by Apple.
 
 ## Install and manage plugins
 
-Open **RightMenu Settings > Plugins** to import a signed `.rightmenuplugin`
-package. The same row links directly to the official plugin downloads in this
-repository. You can also double-click a package in Finder to open the same
-host-owned review flow.
+Download and unzip a plugin from the list above, then open **RightMenu Settings > Plugins** to import the `.rightmenuplugin` file. You can also double-click the plugin file in Finder to install it.
 
-RightMenu verifies the package before installation, shows its authenticated
-publisher source, and opens newly imported plugins directly into access review.
-Each supported access group can be granted or revoked independently. Disabling
-or removing a plugin removes its actions from Finder without affecting built-in
-actions or other plugins.
+Review the publisher and requested permissions during installation. You can manage permissions, disable, or uninstall a plugin at any time in its settings.
 
-For a legacy single-action plugin whose explicit capabilities are all required
-together, the detail page presents one concise access switch instead of exposing
-the internal capability decomposition. RightMenu still stores and revalidates
-each capability independently, and native mutation confirmation and AI data
-consent remain separate.
-
-Production plugins can declare a signed HTTPS update feed. RightMenu may show an
-available update, but the downloaded replacement must still pass package
-integrity, signing-identity continuity, compatibility, and access review.
-
-Plugins that declare Structured AI show a host-owned Codex CLI account section
-inside their plugin detail page. Users can sign in through the Codex CLI ChatGPT
-OAuth flow or enter an OpenAI API key. Every Codex CLI operation uses a private,
-account-scoped RightMenu-only provider profile with file-backed credential
-storage and cannot change the user's main Codex login.
-API keys reach Codex CLI only through standard input, and plugin code never
-receives provider credentials. The API-key path uses a full-width secure field;
-when a future provider registry exposes several compatible local agents, the same
-section is prepared to present a compact agent selector.
+For AI features, follow the prompts in the plugin settings to sign in with ChatGPT or enter an OpenAI API key, and review which data you allow the AI service to receive.
 
 ## Trust and security
 
-RightMenu separates four different trust decisions instead of treating them as
-one broad authorization:
-
-1. **App authenticity** — macOS verifies RightMenu's Developer ID signature,
-   Apple notarization, and stapled ticket.
-2. **Plugin publisher identity** — every production plugin is signed with an
-   Ed25519 publisher key. Official publishers are recognized by RightMenu;
-   unknown valid publishers require an explicit full-fingerprint review before
-   installation.
-3. **Capability access** — a trusted signature does not grant runtime authority.
-   A plugin can use only capabilities declared in its package, supported by the
-   host, and granted by the user. Every invocation is checked again.
-4. **Commercial entitlement** — optional paid features use separately authorized
-   license-signing keys. Plugin code never receives license material, receipts,
-   transactions, or payment credentials.
-
-Additional protections:
-
-- The Finder extension is sandboxed and uses a fail-closed App Group transport.
-- Plugins receive opaque, short-lived selection tokens instead of file paths,
-  Finder objects, AppKit objects, credentials, or ambient filesystem access.
-- Native confirmation remains mandatory for protected file mutations; AI data
-  authorization remains host-managed.
-- Built-in file creation and metadata inspection stay on the Mac.
-- RightMenu contains no analytics, advertising, account system, or device
-  identifier.
-- Accessibility and Finder automation permissions are not required.
-- Normal Finder actions work locally. Network access is limited to the RightMenu
-  update feed and bounded HTTPS feeds declared by installed production plugins.
+- Built-in file creation and file information tools work locally on your Mac.
+- RightMenu verifies plugin sources during installation and asks for permission before plugins access files or use AI services.
+- AI features may send data you authorize to your chosen service; plugins cannot read your sign-in credentials.
+- No ads or usage tracking.
+- No Accessibility or Finder automation permissions required.
 
 ## Compatibility and current limits
 
@@ -137,34 +76,8 @@ Additional protections:
 
 ## Develop a plugin
 
-The installed App bundles `rightmenu-pluginctl`, which can create, diagnose,
-sign, inspect, and pack a plugin without cloning the private host source. Plugin
-business code runs in an isolated process and interacts with RightMenu only
-through the public, versioned Plugin API.
-
-Read the [RightMenu plugin development guide](https://rightmenu.0x01.build/plugins/)
-for the current package format, API contract, capability model, signing flow,
-validation commands, and release guidance.
+Want to add your own features? See the [plugin development guide](https://rightmenu.0x01.build/plugins/) to learn how to create, package, and publish a plugin.
 
 ## Updates and distribution
 
-RightMenu checks the public Sparkle feed for application updates. Every published
-version has a matching `v<version>` GitHub Release with a manual-install DMG and
-release notes. GitHub Release is the publication source; the optional Cloudflare
-R2 endpoint mirrors the background Sparkle ZIP.
-
-This public repository contains release-facing material:
-
-- `appcast.xml` — the Sparkle update feed.
-- `RightMenu-<version>.zip` — the background Sparkle update archive; it is not
-  offered as the manual-install asset on GitHub Releases.
-- `RightMenu-<version>.dmg` — the signed, notarized manual installer shown on
-  GitHub Releases.
-- `RightMenu-<version>.md` — release notes for that version.
-- English and Simplified Chinese product documentation.
-
-The application source is maintained privately. Release artifacts and matching
-documentation are published here through an authorized version tag. Product
-documentation can also receive independent corrections without an app update.
-
-See [release notes](https://github.com/Superoutman/RightMenu/releases) for version history.
+RightMenu supports checking for updates in the app. You can also download the latest installer from [GitHub Releases](https://github.com/Superoutman/RightMenu/releases/latest) or read the [release notes](https://github.com/Superoutman/RightMenu/releases).

@@ -2,13 +2,7 @@
 
 [English](README.md) | **简体中文**
 
-[![Swift 6](https://img.shields.io/badge/Swift-6-F05138?logo=swift&logoColor=white)](https://www.swift.org/)
-[![SwiftUI](https://img.shields.io/badge/UI-SwiftUI-0D96F6?logo=swift&logoColor=white)](https://developer.apple.com/xcode/swiftui/)
-[![AppKit](https://img.shields.io/badge/macOS-AppKit-111111?logo=apple&logoColor=white)](https://developer.apple.com/documentation/appkit)
-[![Finder Sync](https://img.shields.io/badge/Extension-Finder%20Sync-147EFB?logo=apple&logoColor=white)](https://developer.apple.com/documentation/findersync)
-[![Sparkle](https://img.shields.io/badge/Updates-Sparkle-5E5CE6)](https://sparkle-project.org/)
-
-**RightMenu 是一款简洁、原生的 macOS 右键菜单工具，通过实用的内置工具和可扩展的插件系统增强 Finder。你可以创建文件、复制路径、查看文件信息、安装可选插件，或使用其公开的插件 API 构建自己的扩展，同时保持轻量、本地运行，并提供原生的 macOS 使用体验。**
+**RightMenu 是一款原生 macOS 右键菜单工具，让你在 Finder 中快速新建文件、复制路径和查看文件信息，还可以通过可选插件扩展功能。**
 
 [下载 RightMenu](https://github.com/Superoutman/RightMenu/releases/latest) ·
 [官方网站](https://rightmenu.0x01.build/)
@@ -19,8 +13,7 @@ macOS 15 及以上 · Apple 芯片 · 支持 7 种语言
 
 ## 内置核心功能
 
-RightMenu 通过 macOS 原生 Finder Sync 框架扩展 Finder。核心操作始终在本地运行，
-保持精简，并且不依赖任何可选插件。
+以下功能在 Mac 本地运行，无需安装插件。
 
 - 在 Finder 文件夹或桌面中直接新建 TXT、Markdown、RTF，以及兼容且内容为空的
   Word、Excel、PowerPoint、Pages、Numbers 和 Keynote 文件。
@@ -31,16 +24,15 @@ RightMenu 通过 macOS 原生 Finder Sync 框架扩展 Finder。核心操作始�
 
 ## 官方插件
 
-可选功能以独立版本、独立签名的插件交付。插件可以独立演进、更新、失败或卸载，
-无需重新构建 RightMenu，也不会中断宿主的内置 Finder 操作。
+按需安装插件；每个插件都可以独立更新或卸载。
 
 | 插件 | 提供的功能 | 当前状态 | 链接 |
 | --- | --- | --- | --- |
 | [Refresh](https://github.com/Superoutman/RightMenu-Refresh) | 在 Finder 背景菜单中添加“刷新”。它仅显示短暂的怀旧闪屏效果，不会实际刷新目录，也不会更改任何文件。 | v1.0.4 | [下载](https://github.com/Superoutman/RightMenu-Refresh/releases/latest/download/RightMenu-Refresh.zip) · [发布说明](https://github.com/Superoutman/RightMenu-Refresh/releases/latest) |
-| [Desktop Items](https://github.com/Superoutman/RightMenu-DesktopItems) | 在桌面空白处和 Finder 的桌面文件夹中添加隐藏或显示桌面文件的菜单，并通过宿主受保护的可恢复操作执行，包括用户拥有的只读文件。 | v1.0.2 | [下载](https://github.com/Superoutman/RightMenu-DesktopItems/releases/latest/download/RightMenu-DesktopItems.zip) · [发布说明](https://github.com/Superoutman/RightMenu-DesktopItems/releases/latest) |
+| [Desktop Items](https://github.com/Superoutman/RightMenu-DesktopItems) | 在桌面或 Finder 的桌面文件夹中，一键隐藏或显示桌面文件。 | v1.0.2 | [下载](https://github.com/Superoutman/RightMenu-DesktopItems/releases/latest/download/RightMenu-DesktopItems.zip) · [发布说明](https://github.com/Superoutman/RightMenu-DesktopItems/releases/latest) |
 | [AI Rename](https://github.com/Superoutman/RightMenu-AIRename) | 根据图片和文档内容生成文件名，支持审阅及撤销。需要 RightMenu 0.1.70+，建议 0.1.71+。 | v0.2.30 **Beta** | [下载](https://github.com/Superoutman/RightMenu-AIRename/releases/download/v0.2.30/RightMenu-AIRename.zip) · [发布说明](https://github.com/Superoutman/RightMenu-AIRename/releases/tag/v0.2.30) |
 
-“下载”链接指向各插件当前发布版本。Beta 使用明确版本链接，因为 GitHub 的 /releases/latest 不包含预发布版本。
+标记为 **Beta** 的插件仍处于测试阶段。
 
 ## 安装 RightMenu
 
@@ -52,57 +44,23 @@ RightMenu 通过 macOS 原生 Finder Sync 框架扩展 Finder。核心操作始�
    Finder 扩展**，启用 RightMenu。
 5. 如果右键菜单没有立即出现，请重新启动 Finder。
 
-公开版本使用 RightMenu 的 Developer ID Application 身份签名并提交 Apple 公证，
-只有在 App 与 DMG 的公证票据完成装订并通过 Gatekeeper 验收后才会分发。
-如果验证失败，请勿绕过 Gatekeeper；请从官方 Release 页面重新下载 DMG。
+RightMenu 已完成开发者签名和 Apple 公证。
 
 ## 安装和管理插件
 
-打开 **RightMenu 设置 > 插件**，导入签名的 `.rightmenuplugin` 包。同一行的
-“下载插件”链接可直接打开本仓库的官方插件下载区。也可以在 Finder 中双击
-插件包，进入同一个由宿主管理的审核流程。
+从上方列表下载插件并解压，然后打开 **RightMenu 设置 > 插件**，导入 `.rightmenuplugin` 文件。也可以在 Finder 中双击插件文件安装。
 
-RightMenu 会在安装前校验插件包、显示经过认证的发布来源，并让新导入插件直接进入
-访问审核。每组受支持的访问权限都可以独立授予或撤销。停用或删除插件会立即移除它在
-Finder 中的操作，不影响内置功能或其他插件。
+安装时，请查看发布者信息和所需权限。你可以随时在插件设置中管理权限、停用或卸载插件。
 
-对于全部显式能力都必须同时使用的旧版单动作插件，详情页只显示一个简洁的授权开关，
-不再暴露内部能力拆分。RightMenu 仍会分别保存并复验每项能力；原生文件更改确认和 AI
-数据授权仍然保持独立。
-
-正式插件可以声明经过签名的 HTTPS 更新源。RightMenu 可以提示可用更新，但下载后的
-替换包仍必须通过完整性、签名身份连续性、兼容性和访问权限审核。
-
-声明了结构化 AI 能力的插件，会在自己的插件详情页中显示由宿主托管的 Codex CLI
-账户区域。用户可以选择 Codex CLI 的 ChatGPT OAuth 登录，也可以输入 OpenAI API Key。
-所有 Codex CLI 操作都使用仅供 RightMenu 使用、按账户隔离且采用文件凭据存储的独立
-Provider 配置，无法更改用户的主 Codex 登录。API Key 仅通过标准输入交给 Codex CLI，插件代码无法取得 Provider
-凭据。API Key 登录使用整行安全输入框；未来 Provider 注册表提供多个兼容的本地 Agent
-时，同一区域会显示紧凑的 Agent 选择器。
+使用 AI 功能时，按插件设置中的提示登录 ChatGPT 或填写 OpenAI API Key，并确认允许发送给 AI 服务的数据。
 
 ## 信任与安全
 
-RightMenu 将四种不同的信任关系明确分开，不把它们混为一个笼统的“认证”：
-
-1. **宿主身份**：macOS 验证 RightMenu 的 Developer ID 签名、Apple 公证和已装订票据。
-2. **插件发布者身份**：每个正式插件都使用 Ed25519 发布者密钥签名。RightMenu 可以
-   识别官方发布者；首次安装其他有效发布者的插件时，用户必须审核完整公钥指纹。
-3. **能力授权**：可信签名不等于运行权限。插件只能调用包内声明、宿主支持并由用户
-   授权的能力，而且每次调用都会重新校验。
-4. **商业授权**：可选付费功能使用独立授权的许可证签名密钥。插件代码无法读取
-   许可证材料、收据、交易或支付凭据。
-
-其他保护措施：
-
-- Finder 扩展运行在沙盒中，并使用失败关闭的 App Group 传输链路。
-- 插件只能获得短期、不透明的选择 token，不能获得文件路径、Finder 或 AppKit 对象、
-  凭据，也没有环境级文件系统权限。
-- 受保护的文件修改仍必须经过宿主原生确认；AI 数据授权仍由宿主管理。
-- 内置的新建文件和元数据读取始终在 Mac 本地完成。
-- RightMenu 不包含分析、广告、账号系统或设备标识符。
-- 不需要辅助功能权限，也不需要自动化控制 Finder。
-- 常规 Finder 操作在本地运行；网络访问仅限 RightMenu 更新源和已安装正式插件声明的
-  受限 HTTPS 更新源。
+- 内置的新建文件和文件信息查看功能在本地运行。
+- 安装插件时会验证其来源，插件使用文件或 AI 服务前需要你的授权。
+- AI 功能可能将你授权的数据发送给所选服务；插件无法读取你的登录凭据。
+- 无广告，无使用行为追踪。
+- 无需辅助功能或 Finder 自动化权限。
 
 ## 兼容性与当前限制
 
@@ -114,29 +72,8 @@ RightMenu 将四种不同的信任关系明确分开，不把它们混为一个�
 
 ## 开发插件
 
-安装后的 App 内置 `rightmenu-pluginctl`，无需克隆私有宿主源码即可创建、诊断、签名、
-检查和打包插件。插件业务代码在隔离进程中运行，只通过公开、版本化的 Plugin API 与
-RightMenu 交互。
-
-请阅读 [RightMenu 插件开发指南](https://rightmenu.0x01.build/plugins/)，了解
-当前插件包格式、API 契约、能力模型、签名流程、验证命令和发布规范。
+想为 RightMenu 添加自己的功能？请查看[插件开发指南](https://rightmenu.0x01.build/plugins/)，了解如何创建、打包和发布插件。
 
 ## 更新与分发
 
-RightMenu 通过公开的 Sparkle 更新源检查应用更新。每个正式版本都有匹配的
-`v<version>` GitHub Release、手动安装 DMG 和发布说明。GitHub Release 是发布真源；
-可选的 Cloudflare R2 地址镜像后台 Sparkle ZIP。
-
-这个公开仓库只保存面向发布的内容：
-
-- `appcast.xml`：Sparkle 更新源。
-- `RightMenu-<version>.zip`：后台 Sparkle 更新归档，不作为 GitHub Releases
-  的手动安装附件展示。
-- `RightMenu-<version>.dmg`：GitHub Releases 展示的已签名、公证手动安装包。
-- `RightMenu-<version>.md`：对应版本的发布说明。
-- 英文和简体中文产品文档。
-
-应用源码在私有仓库中维护。经过授权的版本标签会向这里发布匹配的产物和文档。
-产品文档也可以独立修正，无需发布应用更新。
-
-版本变化请查看[发布说明](https://github.com/Superoutman/RightMenu/releases)。
+RightMenu 支持应用内检查更新。你也可以从 [GitHub Releases](https://github.com/Superoutman/RightMenu/releases/latest) 下载最新安装包，或查看[发布说明](https://github.com/Superoutman/RightMenu/releases)。
