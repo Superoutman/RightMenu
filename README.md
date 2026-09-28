@@ -15,6 +15,27 @@
 
 macOS 15 or later · Apple silicon · 7 languages
 
+0.1.68 keeps enabled, eligible plugin menus available without a time limit or renewal timer. Settings changes update menus immediately; startup, wake and activation reconcile state. Clicking an action still requires current package, permission and entitlement validation.
+
+0.1.67 candidate adds a model picker after provider sign-in. Models come from the isolated Codex CLI catalog; the saved host-wide choice is passed to subsequent AI requests. “Default Model” follows the CLI default. The Chinese section heading is “AI 提供商”.
+
+0.1.66 candidate adds generic selected-image structured AI with bounded, re-encoded thumbnails, explicit image-content consent, selection identity checks and private attachment cleanup. Requires an image-capable provider; plugins own naming rules.
+
+0.1.65 adds WebP decoding to generic local OCR and image analysis, using only the first frame for animations. Existing limits and access controls remain unchanged.
+
+0.1.64 disables per-process Codex CLI usage analytics to remove measured post-generation
+shutdown delays, with content-free timing diagnostics and unchanged model, sandbox and consent.
+See [Provider performance](Documentation/CODEX_PROVIDER_PERFORMANCE.md) for measurements and limits.
+
+0.1.63 fixes multilingual OCR by enabling automatic language detection over the current
+Vision request's supported system-preferred languages plus English (up to four candidates).
+Chinese navigation labels on Chinese-language systems are no longer lost to the
+default recognition-language configuration. Plugin contracts and Settings appearance are unchanged.
+
+0.1.62 adds an optional, invocation-scoped image-analysis capability for plugins. The host uses
+on-device macOS Vision to return bounded semantic labels and reads bounded embedded photo metadata
+without exposing file paths or image bytes to plugin code.
+
 ![RightMenu Finder context menu](Assets/README/RightMenu.png)
 
 ## Built-in essentials
@@ -74,9 +95,25 @@ Each supported access group can be granted or revoked independently. Disabling
 or removing a plugin removes its actions from Finder without affecting built-in
 actions or other plugins.
 
+For a legacy single-action plugin whose explicit capabilities are all required
+together, the detail page presents one concise access switch instead of exposing
+the internal capability decomposition. RightMenu still stores and revalidates
+each capability independently, and native mutation confirmation and AI data
+consent remain separate.
+
 Production plugins can declare a signed HTTPS update feed. RightMenu may show an
 available update, but the downloaded replacement must still pass package
 integrity, signing-identity continuity, compatibility, and access review.
+
+Plugins that declare Structured AI show a host-owned Codex CLI account section
+inside their plugin detail page. Users can sign in through the Codex CLI ChatGPT
+OAuth flow or enter an OpenAI API key. Every Codex CLI operation uses a private,
+account-scoped RightMenu-only provider profile with file-backed credential
+storage and cannot change the user's main Codex login.
+API keys reach Codex CLI only through standard input, and plugin code never
+receives provider credentials. The API-key path uses a full-width secure field;
+when a future provider registry exposes several compatible local agents, the same
+section is prepared to present a compact agent selector.
 
 ## Trust and security
 
@@ -101,8 +138,8 @@ Additional protections:
 - The Finder extension is sandboxed and uses a fail-closed App Group transport.
 - Plugins receive opaque, short-lived selection tokens instead of file paths,
   Finder objects, AppKit objects, credentials, or ambient filesystem access.
-- Native confirmation remains mandatory for protected file mutations and
-  off-device disclosure.
+- Native confirmation remains mandatory for protected file mutations; AI data
+  authorization remains host-managed.
 - Built-in file creation and metadata inspection stay on the Mac.
 - RightMenu contains no analytics, advertising, account system, or device
   identifier.
@@ -153,3 +190,23 @@ documentation are published here only through an authorized version tag.
 Developer ID builds bind both the host app and Finder extension to their
 embedded provisioning profiles, so their private App Group transport does not
 request access to data belonging to other apps.
+
+Release packaging explicitly uses the macOS 26 SDK with a macOS 15 deployment
+target. This keeps the approved native Settings appearance stable even when the
+build Mac has a newer default SDK.
+`./script/build_and_run.sh --install` defaults to this Release configuration;
+plain development runs continue to default to Debug.
+Release packaging checks the SDK recorded in both the app and Finder extension
+binaries before installation.
+
+The plugin host supports explicitly granted direct rename and per-item undo through optional
+[capabilities](Documentation/PLUGIN_RENAME_EXTENSIONS.md). Legacy rename remains confirmed.
+
+Interactive plugin windows have a bounded ten-minute review lease; presentation
+activates the host once to bring the new window in front of Finder.
+Window levels and appearance are unchanged. Runner, OCR
+and individual AI requests retain one-minute work limits. Window close cancels
+the session and releases its selected-file access.
+
+Finder plugin invocations transfer ephemeral URL bookmarks through the private
+App Group; the host revalidates file identity before invoking a plugin.

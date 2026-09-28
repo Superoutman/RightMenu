@@ -3,25 +3,21 @@
     <channel>
         <title>RightMenu</title>
         <item>
-            <title>0.1.48</title>
-            <pubDate>Tue, 15 Sep 2026 13:25:39 +0000</pubDate>
+            <title>0.1.68</title>
+            <pubDate>Mon, 28 Sep 2026 02:00:15 +0000</pubDate>
             <link>https://github.com/Superoutman/RightMenu</link>
-            <sparkle:version>49</sparkle:version>
-            <sparkle:shortVersionString>0.1.48</sparkle:shortVersionString>
+            <sparkle:version>69</sparkle:version>
+            <sparkle:shortVersionString>0.1.68</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[
-### Fixed
-
-- Desktop Items can now hide and restore user-owned read-only files without
-  changing their permissions or other file flags. A read-only item no longer
-  causes the guarded desktop visibility transaction to roll back.
-- Restored the copyable file information line on macOS 27, including image
-  dimensions and available DPI metadata, after validating the existing bounded
-  metadata lookup and recovery path on the new system version.
+- Include the previously unpublished host improvements: isolated provider sign-in and model selection, local image analysis and WebP support, consent-gated image AI, and controlled rename extensions. Plugins retain independent releases.
+- Keep enabled, eligible Finder plugin menus persistent until state changes; remove menu expiry and renewal timers. Reconcile on startup, wake and host activation without making visibility depend on those events.
+- Separate persistent menu schema v4 from unchanged 30-second invocation requests (v3). Read legacy v3 menu snapshots, including expired ones, as display hints only. Package, permission, entitlement and file checks still run before execution.
+- Cover persistent storage, stopped hosts, state changes, legacy migration and stale-menu authorization rejection. Preserve native Settings appearance and core actions.
 
 ]]></description>
-            <enclosure url="https://raw.githubusercontent.com/Superoutman/RightMenu/main/RightMenu-0.1.48.zip" length="10470321" type="application/octet-stream" sparkle:edSignature="JNGYriShyQ6+geCQXnuW1Kih6L+K4StEOenTBLPIGnG8SBBsS7jnPTw14+dq5I4k++4UCUkUW8R6uFgZUscABg=="/>
+            <enclosure url="https://raw.githubusercontent.com/Superoutman/RightMenu/main/RightMenu-0.1.68.zip" length="10727135" type="application/octet-stream" sparkle:edSignature="iBSQLkFus1NAEQgako+agc2epC2YAL+GKEn32DFsgH+Q91Slk4GUaF+ihfwTJTtL/fvUKdVnVqRqg2csnaN5BQ=="/>
         </item>
     </channel>
 </rss>
