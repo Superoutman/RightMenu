@@ -15,33 +15,6 @@
 
 macOS 15 or later · Apple silicon · 7 languages
 
-0.1.71 combines declared plugin access and AI disclosure in one initial confirmation, and preserves previously approved AI data categories when a user approves additional categories for the same plugin/provider. New categories still require consent; revocation clears all categories. Original filenames are localized in the disclosure prompt.
-
-0.1.70 adds format-independent `files.readBytes` for explicitly authorized current selections. Plugins own format parsing; the host bounds snapshots and chunks, verifies file identity, and forces separate selected-file-content disclosure for remote AI. See [contract](Documentation/PLUGIN_FILE_READ_EXTENSION.md).
-
-0.1.69 supports optional plugin `releaseStage: "beta"` metadata, displaying a blue BETA badge in the plugin list and detail header. Missing or unknown stages show no badge.
-
-0.1.68 keeps enabled, eligible plugin menus available without a time limit or renewal timer. Settings changes update menus immediately; startup, wake and activation reconcile state. Clicking an action still requires current package, permission and entitlement validation.
-
-0.1.67 candidate adds a model picker after provider sign-in. Models come from the isolated Codex CLI catalog; the saved host-wide choice is passed to subsequent AI requests. “Default Model” follows the CLI default. The Chinese section heading is “AI 提供商”.
-
-0.1.66 candidate adds generic selected-image structured AI with bounded, re-encoded thumbnails, explicit image-content consent, selection identity checks and private attachment cleanup. Requires an image-capable provider; plugins own naming rules.
-
-0.1.65 adds WebP decoding to generic local OCR and image analysis, using only the first frame for animations. Existing limits and access controls remain unchanged.
-
-0.1.64 disables per-process Codex CLI usage analytics to remove measured post-generation
-shutdown delays, with content-free timing diagnostics and unchanged model, sandbox and consent.
-See [Provider performance](Documentation/CODEX_PROVIDER_PERFORMANCE.md) for measurements and limits.
-
-0.1.63 fixes multilingual OCR by enabling automatic language detection over the current
-Vision request's supported system-preferred languages plus English (up to four candidates).
-Chinese navigation labels on Chinese-language systems are no longer lost to the
-default recognition-language configuration. Plugin contracts and Settings appearance are unchanged.
-
-0.1.62 adds an optional, invocation-scoped image-analysis capability for plugins. The host uses
-on-device macOS Vision to return bounded semantic labels and reads bounded embedded photo metadata
-without exposing file paths or image bytes to plugin code.
-
 ![RightMenu Finder context menu](Assets/README/RightMenu.png)
 
 ## Built-in essentials
@@ -191,30 +164,7 @@ This public repository contains release-facing material:
 - English and Simplified Chinese product documentation.
 
 The application source is maintained privately. Release artifacts and matching
-documentation are published here only through an authorized version tag.
+documentation are published here through an authorized version tag. Product
+documentation can also receive independent corrections without an app update.
 
-Developer ID builds bind both the host app and Finder extension to their
-embedded provisioning profiles, so their private App Group transport does not
-request access to data belonging to other apps.
-
-Release packaging explicitly uses the macOS 26 SDK with a macOS 15 deployment
-target. This keeps the approved native Settings appearance stable even when the
-build Mac has a newer default SDK.
-`./script/build_and_run.sh --install` defaults to this Release configuration;
-plain development runs continue to default to Debug.
-Release packaging checks the SDK recorded in both the app and Finder extension
-binaries before installation.
-
-The plugin host supports explicitly granted direct rename and per-item undo through optional
-[capabilities](Documentation/PLUGIN_RENAME_EXTENSIONS.md). Legacy rename remains confirmed.
-
-Interactive plugin windows have a bounded ten-minute review lease; presentation
-activates the host once to bring the new window in front of Finder.
-Window levels and appearance are unchanged. Runner, OCR
-and individual AI requests retain one-minute work limits. Window close cancels
-the session and releases its selected-file access.
-
-Finder plugin invocations transfer ephemeral URL bookmarks through the private
-App Group; the host revalidates file identity before invoking a plugin.
-
-- 0.1.71：支持通用 `aiDisclosureCategories` 声明，将当前插件权限和 AI 外发同意合并确认；拒绝不新增授权，关闭撤销外发同意，权限描述同步七种语言。
+See [release notes](https://github.com/Superoutman/RightMenu/releases) for version history.
