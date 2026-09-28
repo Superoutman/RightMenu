@@ -2,7 +2,7 @@
 
 **English** | [简体中文](README.zh-CN.md)
 
-**RightMenu adds useful tools to your macOS right-click menu. Create files, copy paths, and inspect file information in Finder, with optional plugins for more features.**
+**RightMenu is a clean, native right-click menu tool for macOS. Create files, copy paths, and inspect file information in Finder, with optional plugins for more features.**
 
 [Download RightMenu](https://github.com/Superoutman/RightMenu/releases/latest) ·
 [Official website](https://rightmenu.0x01.build/)

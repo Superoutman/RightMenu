@@ -2,7 +2,7 @@
 
 [English](README.md) | **简体中文**
 
-**RightMenu 是一款原生 macOS 右键菜单工具，让你在 Finder 中快速新建文件、复制路径和查看文件信息，还可以通过可选插件扩展功能。**
+**RightMenu 是一款简洁、原生的 macOS 右键菜单工具，让你在 Finder 中快速新建文件、复制路径和查看文件信息，还可以通过可选插件扩展功能。**
 
 [下载 RightMenu](https://github.com/Superoutman/RightMenu/releases/latest) ·
 [官方网站](https://rightmenu.0x01.build/)
