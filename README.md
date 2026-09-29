@@ -61,6 +61,7 @@ For AI features, follow the prompts in the plugin settings to sign in with ChatG
 
 - Built-in file creation and file information tools work locally on your Mac.
 - RightMenu verifies plugin sources during installation and asks for permission before plugins access files or use AI services.
+- Official plugins show **RightMenu** as their installation source, including AI Rename.
 - AI features may send data you authorize to your chosen service; plugins cannot read your sign-in credentials.
 - No ads or usage tracking.
 - No Accessibility or Finder automation permissions required.
@@ -68,6 +69,7 @@ For AI features, follow the prompts in the plugin settings to sign in with ChatG
 ## Compatibility and current limits
 
 - **System:** macOS 15.0 or later.
+- On macOS 15, built-in and plugin selection actions appear without an extra separator to avoid a blank menu row.
 - **Processor:** Apple silicon (`arm64`) only.
 - **Finder scope:** regular folders on the startup disk and the desktop.
 - External drives and USB drives are not currently supported. Menus may not

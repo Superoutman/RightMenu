@@ -3,22 +3,19 @@
     <channel>
         <title>RightMenu</title>
         <item>
-            <title>0.1.71</title>
-            <pubDate>Mon, 28 Sep 2026 08:28:08 +0000</pubDate>
+            <title>0.1.72</title>
+            <pubDate>Tue, 29 Sep 2026 05:56:14 +0000</pubDate>
             <link>https://github.com/Superoutman/RightMenu</link>
-            <sparkle:version>72</sparkle:version>
-            <sparkle:shortVersionString>0.1.71</sparkle:shortVersionString>
+            <sparkle:version>73</sparkle:version>
+            <sparkle:shortVersionString>0.1.72</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[
-- Combine declared plugin access and AI data disclosure in one initial confirmation using generic `aiDisclosureCategories`. Denial adds no grants; turning access off revokes disclosure consent. Update descriptions in seven languages.
-- Include optional BETA badges in plugin lists and detail headers, and bounded, explicitly authorized `files.readBytes` for current selections. Remote AI still requires selected-file-content disclosure.
-
-- Preserve accumulated per-plugin/provider data disclosure grants when additional categories are approved, preventing repeated prompts caused by overwriting earlier grants. Revocation still clears all grants; no new category is auto-approved.
-- Localize original filename disclosure and add persistent-store regression checks for accumulated consent, reload, isolation and revocation.
+- Register AI Rename's existing signing public key as an official publisher so its installation source displays RightMenu. Existing packages keep their signatures and signing-key continuity; third-party publisher names remain unchanged.
+- Omit the separator between built-in selection actions and plugin actions only on macOS 15, avoiding Finder's blank menu row. Other macOS versions retain the native separator; action ordering and dispatch are unchanged.
 
 ]]></description>
-            <enclosure url="https://raw.githubusercontent.com/Superoutman/RightMenu/main/RightMenu-0.1.71.zip" length="10796201" type="application/octet-stream" sparkle:edSignature="JRzENcae1Dd1fSx9GtFexUiiXw0CMeqeauZv0mfbA+s2hzQC802P6er7SDBcRAZD7qnqRMqna2Cu1mOd5HQ1Cw=="/>
+            <enclosure url="https://raw.githubusercontent.com/Superoutman/RightMenu/main/RightMenu-0.1.72.zip" length="10796465" type="application/octet-stream" sparkle:edSignature="0pfwHN8IgvUIceTyHJTE7DCtHf/u/rCertaPVr/Tu4cnQkVqHD5m4M2MDCosrhiIjoMRWKQwI2dvfOlqclOeBw=="/>
         </item>
     </channel>
 </rss>
